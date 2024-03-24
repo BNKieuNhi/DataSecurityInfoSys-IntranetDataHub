@@ -57,7 +57,7 @@ namespace QLDuLieuNoiBo
             //SELECT* FROM USER_TAB_PRIVS
 
             //OracleCommand query = _con.CreateCommand();
-            query.CommandText = "SELECT * FROM DBA_ROLES WHERE ROLE LIKE '%RL_%'";
+            query.CommandText = "SELECT * FROM DBA_ROLES";
 
             query.CommandType = CommandType.Text;
 
