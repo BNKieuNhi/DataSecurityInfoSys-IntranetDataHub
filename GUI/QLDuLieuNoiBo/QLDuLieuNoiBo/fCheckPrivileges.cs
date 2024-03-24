@@ -14,9 +14,6 @@ namespace QLDuLieuNoiBo
     public partial class fCheckPrivileges : Form
     {
         OracleConnection con;
- 
-        string username = "";
-        string password = "";
 
         string dbUser = "SYS";
         string dbUser_password = "21127495";
