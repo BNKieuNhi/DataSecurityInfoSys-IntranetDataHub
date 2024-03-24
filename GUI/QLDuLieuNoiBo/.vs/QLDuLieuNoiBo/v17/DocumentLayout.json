@@ -1,0 +1,86 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\fusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\fusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\fusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\fusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 171,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "fMain.cs",
+              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fMain.cs",
+              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\fMain.cs",
+              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fMain.cs",
+              "RelativeToolTip": "QLDuLieuNoiBo\\fMain.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T00:45:41.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fUsers.cs",
+              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fUsers.cs",
+              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\fUsers.cs",
+              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fUsers.cs",
+              "RelativeToolTip": "QLDuLieuNoiBo\\fUsers.cs",
+              "ViewState": "AQIAALgAAAAAAAAAAAAqwNAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T01:04:20.668Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fUsers.cs [Design]",
+              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fUsers.cs",
+              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\fUsers.cs",
+              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fUsers.cs [Design]",
+              "RelativeToolTip": "QLDuLieuNoiBo\\fUsers.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T00:48:30.47Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "fMain.cs [Design]",
+              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fMain.cs",
+              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\fMain.cs",
+              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fMain.cs [Design]",
+              "RelativeToolTip": "QLDuLieuNoiBo\\fMain.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T00:43:04.991Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
