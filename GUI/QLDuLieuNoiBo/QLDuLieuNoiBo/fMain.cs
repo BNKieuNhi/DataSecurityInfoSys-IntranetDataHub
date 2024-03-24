@@ -28,5 +28,12 @@ namespace QLDuLieuNoiBo
             _fUser.Show();
             this.Hide();
         }
+
+        private void checkPrivilegesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fCheckPrivileges _fCheckPrivileges = new fCheckPrivileges();
+            _fCheckPrivileges.Show();
+            this.Hide();
+        }
     }
 }
