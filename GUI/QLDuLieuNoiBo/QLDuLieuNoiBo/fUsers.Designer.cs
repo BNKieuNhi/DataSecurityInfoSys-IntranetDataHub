@@ -44,7 +44,7 @@
             this.txtUName = new System.Windows.Forms.TextBox();
             this.lblUID = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -181,18 +181,16 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(282, 31);
             this.txtPassword.TabIndex = 10;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
-            // label2
+            // lblPassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(435, 417);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 25);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Password:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(435, 417);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(91, 25);
+            this.lblPassword.TabIndex = 9;
+            this.lblPassword.Text = "Password:";
             // 
             // btnAdd
             // 
@@ -214,7 +212,7 @@
             this.btnEdit.TabIndex = 12;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
-            this.btnEdit.Click += new System.EventHandler(this.button2_Click);
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -236,6 +234,7 @@
             this.btnView.TabIndex = 14;
             this.btnView.Text = "Xem";
             this.btnView.UseVisualStyleBackColor = true;
+            this.btnView.Visible = false;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // txtUId
@@ -265,6 +264,7 @@
             this.btnCancel.TabIndex = 17;
             this.btnCancel.Text = "Hủy";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnRecord
             // 
@@ -291,7 +291,7 @@
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.txtUName);
             this.Controls.Add(this.lblUID);
             this.Controls.Add(this.txtKeyword);
@@ -328,7 +328,7 @@
         private System.Windows.Forms.TextBox txtUName;
         private System.Windows.Forms.Label lblUID;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
