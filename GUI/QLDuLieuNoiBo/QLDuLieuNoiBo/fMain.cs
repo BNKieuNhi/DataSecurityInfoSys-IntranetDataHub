@@ -35,5 +35,26 @@ namespace QLDuLieuNoiBo
             _fCheckPrivileges.Show();
             this.Hide();
         }
+
+        private void grantToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fGrantPrivileges _fGrantPrivileges = new fGrantPrivileges();
+            _fGrantPrivileges.Show();
+            this.Hide();
+        }
+
+        private void grantRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fGrantRoles _fGrantRoles = new fGrantRoles();
+            _fGrantRoles.Show();
+            this.Hide();
+        }
+
+        private void colPrivilege_Click(object sender, EventArgs e)
+        {
+            fColumnPriv _fColumnPriv = new fColumnPriv();
+            _fColumnPriv.Show();
+            this.Hide();
+        }
     }
 }
