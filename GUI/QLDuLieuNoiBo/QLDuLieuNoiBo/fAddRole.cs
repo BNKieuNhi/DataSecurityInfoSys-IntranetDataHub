@@ -29,8 +29,15 @@ namespace QLDuLieuNoiBo
 
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAddRole _fAddRole = new fAddRole();
-            _fAddRole.Show();
+            fUsers _fUser = new fUsers();
+            _fUser.Show();
+            this.Hide();
+        }
+
+        private void columnPrivilegesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fColumnPriv _fColumnPriv = new fColumnPriv();
+            _fColumnPriv.Show();
             this.Hide();
         }
 
