@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QLDuLieuNoiBo
 {
@@ -21,7 +23,7 @@ namespace QLDuLieuNoiBo
 
         DataTable pri_tables = new DataTable();
         DataTable allTables = new DataTable();
-
+        string inputType = "";
 
         public fGrantPrivileges()
         {
@@ -40,6 +42,39 @@ namespace QLDuLieuNoiBo
             con = new OracleConnection(conStr);
         }
 
+        private bool checkPrivileges(string input, string priv_name, string table_name, string grantable, string type)
+        {
+            OracleCommand oc = con.CreateCommand();
+
+            if (type == "Role")
+            {
+                oc.CommandText = "SELECT COUNT(*) FROM ROLE_TAB_PRIVS " +
+                "WHERE ROLE = '" + input
+                + "' AND TABLE_NAME = '" + table_name
+                + "' AND PRIVILEGE = '" + priv_name
+                + "' AND GRANTABLE = '" + grantable + "'";
+            }
+            else
+            {
+                oc.CommandText = "SELECT COUNT(*) FROM DBA_TAB_PRIVS " +
+                "WHERE GRANTEE = '" + input
+                + "' AND TABLE_NAME = '" + table_name
+                + "' AND PRIVILEGE = '" + priv_name
+                + "' AND GRANTABLE = '" + grantable + "'";
+            }
+            oc.CommandType = CommandType.Text;
+            Console.WriteLine(oc.CommandText);
+
+            int count = 0;
+            //Convert.ToInt32(cmdCheckUser.ExecuteScalar());
+            count = Convert.ToInt32(oc.ExecuteScalar());
+            if (count <= 0)
+            {
+                return false;
+            }
+
+            return true;
+        }
         private void txtInput_TextChanged(object sender, EventArgs e)
         {
 
@@ -57,14 +92,18 @@ namespace QLDuLieuNoiBo
             dataGridView_ListGrant.Rows.Clear();
             string input = txtInput.Text.Trim().ToUpper();
             string sqlCheck = "SELECT COUNT(*) FROM DBA_USERS WHERE USERNAME = '" + input + "'";
-            Console.WriteLine(sqlCheck);
+            //Console.WriteLine(sqlCheck);
             OracleCommand cmdCheck = new OracleCommand(sqlCheck, con);
 
             int count = 0;
             count = Convert.ToInt32(cmdCheck.ExecuteScalar());
 
+            if (count > 0)
+            {
+                inputType = "User";
+            }
             sqlCheck = "SELECT COUNT(*) FROM DBA_ROLES WHERE ROLE = '" + input + "'";
-            Console.WriteLine(sqlCheck);
+            //Console.WriteLine(sqlCheck);
             cmdCheck = new OracleCommand(sqlCheck, con);
 
             count += Convert.ToInt32(cmdCheck.ExecuteScalar());
@@ -73,6 +112,10 @@ namespace QLDuLieuNoiBo
             {
                 MessageBox.Show("Khong tim thay nguoi dung/vai tro", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
+            }
+            else if (inputType == "")
+            {
+                inputType = "Role";
             }
 
             OracleCommand oc = con.CreateCommand();
@@ -126,24 +169,90 @@ namespace QLDuLieuNoiBo
                     }
                 }
 
-                pri_tables.Rows.Add(currentTable, select, sGrantable,
+                dataGridView_ListGrant.Rows.Add(currentTable, select, sGrantable,
                     insert, iGrantable, update, uGrantable, delete, dGrantable);
             }
+            con.Close();
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            con.Open();
+            if (txtInput.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Vui lòng nhap ten nguoi dung/vai tro", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
 
+            int rowCount = dataGridView_ListGrant.Rows.Count;
+            string[] priv_types = new string[] {"","SELECT", "INSERT","UPDATE" ,"DELETE"};
+
+            for (int i = 0; i < rowCount - 1; i++)
+            {
+                DataGridViewRow row = dataGridView_ListGrant.Rows[i];
+
+                //int cnt = row.Cells.Count;
+                //Console.WriteLine("CNT: " + cnt.ToString());
+
+                for (int j = 1; j < row.Cells.Count - 1 ; j++)
+                {
+                    string currentTable = row.Cells[0].Value.ToString().ToUpper(); ;
+
+                    bool isChecked = (bool) row.Cells[j].Value;
+    
+                    string priv_type = priv_types[(j + 1) / 2];
+
+                    string grantable = "NO";
+                    if (j % 2 == 0)
+                    {
+                        grantable = "YES";
+                    }
+
+
+                    bool granted = checkPrivileges(txtInput.Text.Trim().ToUpper(), priv_type, currentTable, grantable, inputType);
+
+                    if (isChecked && !granted)
+                    {
+                        OracleCommand oc = con.CreateCommand();
+
+                        oc.CommandText = "GRANT " + priv_type + " ON " + currentTable + " TO " + txtInput.Text.Trim().ToUpper();
+
+                        Console.WriteLine(inputType);
+
+                        if (grantable == "YES" && inputType == "User")
+                        {
+                            oc.CommandText += " WITH GRANT OPTION";
+                        }
+
+                        Console.WriteLine(oc.CommandText);
+
+                        oc.ExecuteNonQuery();
+                    }
+                    if (!isChecked && granted)
+                    {
+
+                        OracleCommand oc = con.CreateCommand();
+
+                        oc.CommandText = "REVOKE  " + priv_type + " ON " + currentTable + " FROM " + txtInput.Text.Trim().ToUpper();
+
+                        Console.WriteLine(oc.CommandText);
+
+                        oc.ExecuteNonQuery();
+                    }
+                }
+            }
+            
+            MessageBox.Show("Cap nhat quyen thanh cong", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            con.Close();
         }
 
+       
         private void fGrantPrivileges_Load(object sender, EventArgs e)
         {
             string[] cols = new string[] { "Table Name", "Select", "Select (Grantable)",
-                "Insert", "Insert (Grantable)"
-            ,"Update", "Update (Grantable)"
-            ,"Delete", "Delete (Grantable)" , ""};
+                "Insert", "Insert (Grantable)","Update", "Update (Grantable)" ,"Delete", "Delete (Grantable)" , ""};
 
-            for (int i = 0; i < cols.Length; i++)
+            for (int i = 0; i < cols.Length - 1; i++)
             {
                 if (i == 0)
                 {
