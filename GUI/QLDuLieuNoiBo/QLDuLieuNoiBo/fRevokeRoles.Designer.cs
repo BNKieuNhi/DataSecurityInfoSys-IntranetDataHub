@@ -65,7 +65,7 @@
             // 
             this.btnConfirm.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnConfirm.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.Location = new System.Drawing.Point(615, 78);
+            this.btnConfirm.Location = new System.Drawing.Point(611, 82);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(111, 33);
             this.btnConfirm.TabIndex = 20;
@@ -90,6 +90,7 @@
             this.grantRolesToolStripMenuItem.Name = "grantRolesToolStripMenuItem";
             this.grantRolesToolStripMenuItem.Size = new System.Drawing.Size(112, 27);
             this.grantRolesToolStripMenuItem.Text = "Grant Roles";
+            this.grantRolesToolStripMenuItem.Click += new System.EventHandler(this.grantRolesToolStripMenuItem_Click);
             // 
             // grantToolStripMenuItem
             // 
@@ -130,6 +131,7 @@
             // dataGridView_ListUsers
             // 
             this.dataGridView_ListUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_ListUsers.EnableHeadersVisualStyles = false;
             this.dataGridView_ListUsers.Location = new System.Drawing.Point(2, 149);
             this.dataGridView_ListUsers.Name = "dataGridView_ListUsers";
             this.dataGridView_ListUsers.RowHeadersWidth = 51;
@@ -216,6 +218,7 @@
             this.Controls.Add(this.dataGridView_ListUsers);
             this.Controls.Add(this.menuStrip1);
             this.Name = "fRevokeRoles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Revoke Roles";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ListUsers)).EndInit();
             this.menuStrip1.ResumeLayout(false);

@@ -470,5 +470,29 @@ namespace QLDuLieuNoiBo
             _fRevokeRoles.Show();
             this.Hide();
         }
+
+        private void grantRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fGrantRoles _fGrantRoles = new fGrantRoles();
+            _fGrantRoles.Show();
+            this.Hide();
+        }
+
+        private void checkPrivilegesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fCheckPrivileges _fCheckPrivileges = new fCheckPrivileges();
+            _fCheckPrivileges.Show();
+            this.Hide();
+        }
+
+        private void grantToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

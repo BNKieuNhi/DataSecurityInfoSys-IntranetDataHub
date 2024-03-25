@@ -199,5 +199,12 @@ namespace QLDuLieuNoiBo
             _fUser.Show();
             this.Hide();
         }
+
+        private void grantRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fGrantRoles _fGrantRoles = new fGrantRoles();
+            _fGrantRoles.Show();
+            this.Hide();
+        }
     }
 }
