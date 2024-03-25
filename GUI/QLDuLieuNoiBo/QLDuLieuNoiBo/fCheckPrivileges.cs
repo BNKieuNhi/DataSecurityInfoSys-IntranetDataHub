@@ -29,21 +29,6 @@ namespace QLDuLieuNoiBo
 
         }
 
-        private void roleToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkPrivilegesToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnBang_Click(object sender, EventArgs e)
         {
             string conStr = "";
@@ -166,6 +151,48 @@ namespace QLDuLieuNoiBo
             {
                 Console.WriteLine("Loi ket noi: " + ex.Message);
             }
+        }
+
+        private void grantToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fGrantPrivileges _fGrantPrivileges = new fGrantPrivileges();
+            _fGrantPrivileges.Show();
+            this.Hide();
+        }
+
+        private void usersToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fUsers _fUser = new fUsers();
+            _fUser.Show();
+            this.Hide();
+        }
+
+        private void revokePrivilegesRoleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fRevokeRoles _fRevokeRoles = new fRevokeRoles();
+            _fRevokeRoles.Show();
+            this.Hide();
+        }
+
+        private void roleToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fAddRole _fAddRoles = new fAddRole();
+            _fAddRoles.Show();
+            this.Hide();
+        }
+
+        private void grantRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fGrantRoles _fGrantRoles = new fGrantRoles();
+            _fGrantRoles.Show();
+            this.Hide();
+        }
+
+        private void colPrivilegesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fRevokeRoles _fRevokeRoles = new fRevokeRoles();
+            _fRevokeRoles.Show();
+            this.Hide();
         }
     }
 }

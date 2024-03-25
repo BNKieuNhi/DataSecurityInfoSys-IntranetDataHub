@@ -19,7 +19,9 @@ namespace QLDuLieuNoiBo
 
         private void roleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fAddRole _fAddRole = new fAddRole();
+            _fAddRole.Show();
+            this.Hide();
         }
 
         private void usersToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,6 +56,13 @@ namespace QLDuLieuNoiBo
         {
             fColumnPriv _fColumnPriv = new fColumnPriv();
             _fColumnPriv.Show();
+            this.Hide();
+        }
+
+        private void revokePrivilegesRoleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fRevokeRoles _fRevokeRoles = new fRevokeRoles();
+            _fRevokeRoles.Show();
             this.Hide();
         }
     }

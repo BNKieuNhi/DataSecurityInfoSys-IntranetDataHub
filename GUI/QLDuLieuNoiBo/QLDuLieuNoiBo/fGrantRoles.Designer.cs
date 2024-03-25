@@ -45,6 +45,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtInput = new System.Windows.Forms.TextBox();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ListUsers)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -67,14 +68,14 @@
             this.dataGridView_ListUsers.Name = "dataGridView_ListUsers";
             this.dataGridView_ListUsers.RowHeadersWidth = 51;
             this.dataGridView_ListUsers.RowTemplate.Height = 24;
-            this.dataGridView_ListUsers.Size = new System.Drawing.Size(786, 273);
+            this.dataGridView_ListUsers.Size = new System.Drawing.Size(870, 273);
             this.dataGridView_ListUsers.TabIndex = 37;
             // 
             // revokePrivilegesRoleToolStripMenuItem
             // 
             this.revokePrivilegesRoleToolStripMenuItem.Name = "revokePrivilegesRoleToolStripMenuItem";
-            this.revokePrivilegesRoleToolStripMenuItem.Size = new System.Drawing.Size(116, 27);
-            this.revokePrivilegesRoleToolStripMenuItem.Text = "Revoke Role";
+            this.revokePrivilegesRoleToolStripMenuItem.Size = new System.Drawing.Size(123, 27);
+            this.revokePrivilegesRoleToolStripMenuItem.Text = "Revoke Roles";
             this.revokePrivilegesRoleToolStripMenuItem.Click += new System.EventHandler(this.revokePrivilegesRoleToolStripMenuItem_Click);
             // 
             // fGrantRolesToolStripMenuItem
@@ -82,6 +83,7 @@
             this.fGrantRolesToolStripMenuItem.Name = "fGrantRolesToolStripMenuItem";
             this.fGrantRolesToolStripMenuItem.Size = new System.Drawing.Size(112, 27);
             this.fGrantRolesToolStripMenuItem.Text = "Grant Roles";
+            this.fGrantRolesToolStripMenuItem.Click += new System.EventHandler(this.fGrantRolesToolStripMenuItem_Click);
             // 
             // grantToolStripMenuItem
             // 
@@ -121,10 +123,11 @@
             this.checkPrivilegesToolStripMenuItem,
             this.grantToolStripMenuItem,
             this.fGrantRolesToolStripMenuItem,
-            this.revokePrivilegesRoleToolStripMenuItem});
+            this.revokePrivilegesRoleToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(786, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(870, 31);
             this.menuStrip1.TabIndex = 36;
             this.menuStrip1.Text = "menuQuanLy";
             // 
@@ -199,11 +202,18 @@
             this.txtInput.Size = new System.Drawing.Size(176, 30);
             this.txtInput.TabIndex = 46;
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(125, 27);
+            this.toolStripMenuItem1.Text = "Col Privileges";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // fGrantRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(786, 418);
+            this.ClientSize = new System.Drawing.Size(870, 418);
             this.Controls.Add(this.txtInput);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -243,5 +253,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtInput;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

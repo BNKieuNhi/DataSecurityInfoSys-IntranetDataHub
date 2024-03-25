@@ -1,4 +1,6 @@
-﻿namespace QLDuLieuNoiBo
+﻿using System.Windows.Forms;
+
+namespace QLDuLieuNoiBo
 {
     partial class fMain
     {
@@ -36,6 +38,9 @@
             this.grantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grantRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.revokePrivilegesRoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colPrivilege = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.columnPrivilegesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,10 +55,12 @@
             this.checkPrivilegesToolStripMenuItem,
             this.grantToolStripMenuItem,
             this.grantRolesToolStripMenuItem,
-            this.revokePrivilegesRoleToolStripMenuItem});
+            this.revokePrivilegesRoleToolStripMenuItem,
+            this.colPrivilege,
+            this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(882, 31);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuQuanLy";
             // 
@@ -83,18 +90,38 @@
             this.grantToolStripMenuItem.Name = "grantToolStripMenuItem";
             this.grantToolStripMenuItem.Size = new System.Drawing.Size(143, 27);
             this.grantToolStripMenuItem.Text = "Grant Privileges";
+            this.grantToolStripMenuItem.Click += new System.EventHandler(this.grantToolStripMenuItem_Click);
             // 
             // grantRolesToolStripMenuItem
             // 
             this.grantRolesToolStripMenuItem.Name = "grantRolesToolStripMenuItem";
             this.grantRolesToolStripMenuItem.Size = new System.Drawing.Size(112, 27);
             this.grantRolesToolStripMenuItem.Text = "Grant Roles";
+            this.grantRolesToolStripMenuItem.Click += new System.EventHandler(this.grantRolesToolStripMenuItem_Click);
             // 
             // revokePrivilegesRoleToolStripMenuItem
             // 
             this.revokePrivilegesRoleToolStripMenuItem.Name = "revokePrivilegesRoleToolStripMenuItem";
-            this.revokePrivilegesRoleToolStripMenuItem.Size = new System.Drawing.Size(192, 27);
-            this.revokePrivilegesRoleToolStripMenuItem.Text = "Revoke Privileges Role";
+            this.revokePrivilegesRoleToolStripMenuItem.Size = new System.Drawing.Size(123, 27);
+            this.revokePrivilegesRoleToolStripMenuItem.Text = "Revoke Roles";
+            this.revokePrivilegesRoleToolStripMenuItem.Click += new System.EventHandler(this.revokePrivilegesRoleToolStripMenuItem_Click);
+            // 
+            // colPrivilege
+            // 
+            this.colPrivilege.Name = "colPrivilege";
+            this.colPrivilege.Size = new System.Drawing.Size(125, 27);
+            this.colPrivilege.Text = "Col Privileges";
+            this.colPrivilege.Click += new System.EventHandler(this.colPrivilege_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(14, 27);
+            // 
+            // columnPrivilegesToolStripMenuItem
+            // 
+            this.columnPrivilegesToolStripMenuItem.Name = "columnPrivilegesToolStripMenuItem";
+            this.columnPrivilegesToolStripMenuItem.Size = new System.Drawing.Size(32, 19);
             // 
             // contextMenuStrip1
             // 
@@ -106,7 +133,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(882, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fMain";
@@ -128,7 +155,11 @@
         private System.Windows.Forms.ToolStripMenuItem grantToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grantRolesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem revokePrivilegesRoleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem columnPrivilegesToolStripMenuItem;
+        //private ToolStripMenuItem columnPrivilegesToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem colPrivilege;
     }
 }
 

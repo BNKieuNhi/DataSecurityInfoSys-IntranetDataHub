@@ -39,6 +39,7 @@
             this.roleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.colPrivilegesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -80,12 +81,14 @@
             this.revokePrivilegesRoleToolStripMenuItem.Name = "revokePrivilegesRoleToolStripMenuItem";
             this.revokePrivilegesRoleToolStripMenuItem.Size = new System.Drawing.Size(123, 27);
             this.revokePrivilegesRoleToolStripMenuItem.Text = "Revoke Roles";
+            this.revokePrivilegesRoleToolStripMenuItem.Click += new System.EventHandler(this.revokePrivilegesRoleToolStripMenuItem_Click);
             // 
             // grantRolesToolStripMenuItem
             // 
             this.grantRolesToolStripMenuItem.Name = "grantRolesToolStripMenuItem";
             this.grantRolesToolStripMenuItem.Size = new System.Drawing.Size(112, 27);
             this.grantRolesToolStripMenuItem.Text = "Grant Roles";
+            this.grantRolesToolStripMenuItem.Click += new System.EventHandler(this.grantRolesToolStripMenuItem_Click_1);
             // 
             // grantToolStripMenuItem
             // 
@@ -98,18 +101,21 @@
             this.checkPrivilegesToolStripMenuItem.Name = "checkPrivilegesToolStripMenuItem";
             this.checkPrivilegesToolStripMenuItem.Size = new System.Drawing.Size(146, 27);
             this.checkPrivilegesToolStripMenuItem.Text = "Check Privileges";
+            this.checkPrivilegesToolStripMenuItem.Click += new System.EventHandler(this.checkPrivilegesToolStripMenuItem_Click_1);
             // 
             // roleToolStripMenuItem
             // 
             this.roleToolStripMenuItem.Name = "roleToolStripMenuItem";
             this.roleToolStripMenuItem.Size = new System.Drawing.Size(64, 27);
             this.roleToolStripMenuItem.Text = "Roles";
+            this.roleToolStripMenuItem.Click += new System.EventHandler(this.roleToolStripMenuItem_Click_1);
             // 
             // usersToolStripMenuItem
             // 
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(65, 27);
             this.usersToolStripMenuItem.Text = "Users";
+            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click_1);
             // 
             // menuStrip1
             // 
@@ -121,12 +127,20 @@
             this.checkPrivilegesToolStripMenuItem,
             this.grantToolStripMenuItem,
             this.grantRolesToolStripMenuItem,
-            this.revokePrivilegesRoleToolStripMenuItem});
+            this.revokePrivilegesRoleToolStripMenuItem,
+            this.colPrivilegesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(967, 31);
             this.menuStrip1.TabIndex = 36;
             this.menuStrip1.Text = "menuQuanLy";
+            // 
+            // colPrivilegesToolStripMenuItem
+            // 
+            this.colPrivilegesToolStripMenuItem.Name = "colPrivilegesToolStripMenuItem";
+            this.colPrivilegesToolStripMenuItem.Size = new System.Drawing.Size(125, 27);
+            this.colPrivilegesToolStripMenuItem.Text = "Col Privileges";
+            this.colPrivilegesToolStripMenuItem.Click += new System.EventHandler(this.colPrivilegesToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -193,5 +207,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.ToolStripMenuItem colPrivilegesToolStripMenuItem;
     }
 }

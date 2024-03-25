@@ -22,7 +22,7 @@ namespace QLDuLieuNoiBo
 
         string dbUser = "SYS";
         //string dbUser_password = "21127495";
-        string dbUser_password = "21127659";
+        string dbUser_password = "21127495";
         bool sys = true;
         public fGrantRoles()
         {
@@ -48,13 +48,13 @@ namespace QLDuLieuNoiBo
 
             string[] cols = new string[] { "NHANVIENCOBAN", "TRUONGKHOA", "TRUONGDONVI",
                 "GIAOVU", "GIANGVIEN","SINHVIEN"};
-            
+
             foreach (string col in cols)
             {
                 cbBox_Role.Items.Add(col);
             }
 
-            
+
             con.Close();
         }
         public void GetData()
@@ -63,7 +63,10 @@ namespace QLDuLieuNoiBo
             con = new OracleConnection(conStr);
             try
             {
-                con.Open();
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
 
                 string selectedRole = "";
                 string whereClause = ""; // Điều kiện WHERE cho truy vấn SQL
@@ -114,7 +117,11 @@ namespace QLDuLieuNoiBo
                 return;
             }
 
-            con.Open();
+
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
 
             String role = cbBox_Role.Text.Trim().ToUpper();
             String input = txtInput.Text.Trim().ToUpper();
@@ -146,7 +153,7 @@ namespace QLDuLieuNoiBo
             int res = 0;
             res = oc.ExecuteNonQuery();
 
-            if (res != 0) 
+            if (res != 0)
             {
                 MessageBox.Show("Cap nhat quyen thanh cong", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 con.Close();
@@ -170,17 +177,33 @@ namespace QLDuLieuNoiBo
 
         private void roleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fAddRole _fAddRole = new fAddRole();
+            _fAddRole.Show();
+            this.Hide();
         }
 
         private void grantToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fGrantPrivileges _fGrantPrivileges = new fGrantPrivileges();
+            _fGrantPrivileges.Show();
+            this.Hide();
         }
 
         private void cbBox_Role_SelectedIndexChanged(object sender, EventArgs e)
         {
             GetData();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fColumnPriv _fColumnPriv = new fColumnPriv();
+            _fColumnPriv.Show();
+            this.Hide();
+        }
+
+        private void fGrantRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

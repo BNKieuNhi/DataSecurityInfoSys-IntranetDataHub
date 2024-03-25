@@ -107,36 +107,42 @@
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(65, 27);
             this.usersToolStripMenuItem.Text = "Users";
+            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click_1);
             // 
             // roleToolStripMenuItem
             // 
             this.roleToolStripMenuItem.Name = "roleToolStripMenuItem";
             this.roleToolStripMenuItem.Size = new System.Drawing.Size(64, 27);
             this.roleToolStripMenuItem.Text = "Roles";
+            this.roleToolStripMenuItem.Click += new System.EventHandler(this.roleToolStripMenuItem_Click_1);
             // 
             // checkPrivilegesToolStripMenuItem
             // 
             this.checkPrivilegesToolStripMenuItem.Name = "checkPrivilegesToolStripMenuItem";
             this.checkPrivilegesToolStripMenuItem.Size = new System.Drawing.Size(146, 27);
             this.checkPrivilegesToolStripMenuItem.Text = "Check Privileges";
+            this.checkPrivilegesToolStripMenuItem.Click += new System.EventHandler(this.checkPrivilegesToolStripMenuItem_Click_1);
             // 
             // grantToolStripMenuItem
             // 
             this.grantToolStripMenuItem.Name = "grantToolStripMenuItem";
             this.grantToolStripMenuItem.Size = new System.Drawing.Size(143, 27);
             this.grantToolStripMenuItem.Text = "Grant Privileges";
+            this.grantToolStripMenuItem.Click += new System.EventHandler(this.grantToolStripMenuItem_Click_1);
             // 
             // grantRolesToolStripMenuItem
             // 
             this.grantRolesToolStripMenuItem.Name = "grantRolesToolStripMenuItem";
             this.grantRolesToolStripMenuItem.Size = new System.Drawing.Size(112, 27);
             this.grantRolesToolStripMenuItem.Text = "Grant Roles";
+            this.grantRolesToolStripMenuItem.Click += new System.EventHandler(this.grantRolesToolStripMenuItem_Click_1);
             // 
             // revokePrivilegesRoleToolStripMenuItem
             // 
             this.revokePrivilegesRoleToolStripMenuItem.Name = "revokePrivilegesRoleToolStripMenuItem";
-            this.revokePrivilegesRoleToolStripMenuItem.Size = new System.Drawing.Size(192, 27);
-            this.revokePrivilegesRoleToolStripMenuItem.Text = "Revoke Privileges Role";
+            this.revokePrivilegesRoleToolStripMenuItem.Size = new System.Drawing.Size(123, 27);
+            this.revokePrivilegesRoleToolStripMenuItem.Text = "Revoke Roles";
+            this.revokePrivilegesRoleToolStripMenuItem.Click += new System.EventHandler(this.revokePrivilegesRoleToolStripMenuItem_Click_1);
             // 
             // columnPrivilegesToolStripMenuItem
             // 

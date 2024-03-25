@@ -42,6 +42,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnCot = new System.Windows.Forms.Button();
             this.btnBang = new System.Windows.Forms.Button();
+            this.colPrivilegesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ListPrivileges)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -77,20 +78,23 @@
             // revokePrivilegesRoleToolStripMenuItem
             // 
             this.revokePrivilegesRoleToolStripMenuItem.Name = "revokePrivilegesRoleToolStripMenuItem";
-            this.revokePrivilegesRoleToolStripMenuItem.Size = new System.Drawing.Size(192, 27);
-            this.revokePrivilegesRoleToolStripMenuItem.Text = "Revoke Privileges Role";
+            this.revokePrivilegesRoleToolStripMenuItem.Size = new System.Drawing.Size(123, 27);
+            this.revokePrivilegesRoleToolStripMenuItem.Text = "Revoke Roles";
+            this.revokePrivilegesRoleToolStripMenuItem.Click += new System.EventHandler(this.revokePrivilegesRoleToolStripMenuItem_Click);
             // 
             // grantRolesToolStripMenuItem
             // 
             this.grantRolesToolStripMenuItem.Name = "grantRolesToolStripMenuItem";
             this.grantRolesToolStripMenuItem.Size = new System.Drawing.Size(112, 27);
             this.grantRolesToolStripMenuItem.Text = "Grant Roles";
+            this.grantRolesToolStripMenuItem.Click += new System.EventHandler(this.grantRolesToolStripMenuItem_Click);
             // 
             // grantToolStripMenuItem
             // 
             this.grantToolStripMenuItem.Name = "grantToolStripMenuItem";
             this.grantToolStripMenuItem.Size = new System.Drawing.Size(143, 27);
             this.grantToolStripMenuItem.Text = "Grant Privileges";
+            this.grantToolStripMenuItem.Click += new System.EventHandler(this.grantToolStripMenuItem_Click_1);
             // 
             // checkPrivilegesToolStripMenuItem
             // 
@@ -103,12 +107,14 @@
             this.roleToolStripMenuItem.Name = "roleToolStripMenuItem";
             this.roleToolStripMenuItem.Size = new System.Drawing.Size(64, 27);
             this.roleToolStripMenuItem.Text = "Roles";
+            this.roleToolStripMenuItem.Click += new System.EventHandler(this.roleToolStripMenuItem_Click_1);
             // 
             // usersToolStripMenuItem
             // 
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(65, 27);
             this.usersToolStripMenuItem.Text = "Users";
+            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click_1);
             // 
             // menuStrip1
             // 
@@ -120,7 +126,8 @@
             this.checkPrivilegesToolStripMenuItem,
             this.grantToolStripMenuItem,
             this.grantRolesToolStripMenuItem,
-            this.revokePrivilegesRoleToolStripMenuItem});
+            this.revokePrivilegesRoleToolStripMenuItem,
+            this.colPrivilegesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(982, 31);
@@ -154,6 +161,13 @@
             this.btnBang.Text = "Kiểm tra quyền theo mức bảng";
             this.btnBang.UseVisualStyleBackColor = true;
             this.btnBang.Click += new System.EventHandler(this.btnBang_Click);
+            // 
+            // colPrivilegesToolStripMenuItem
+            // 
+            this.colPrivilegesToolStripMenuItem.Name = "colPrivilegesToolStripMenuItem";
+            this.colPrivilegesToolStripMenuItem.Size = new System.Drawing.Size(125, 27);
+            this.colPrivilegesToolStripMenuItem.Text = "Col Privileges";
+            this.colPrivilegesToolStripMenuItem.Click += new System.EventHandler(this.colPrivilegesToolStripMenuItem_Click);
             // 
             // fCheckPrivileges
             // 
@@ -191,5 +205,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button btnCot;
         private System.Windows.Forms.Button btnBang;
+        private System.Windows.Forms.ToolStripMenuItem colPrivilegesToolStripMenuItem;
     }
 }

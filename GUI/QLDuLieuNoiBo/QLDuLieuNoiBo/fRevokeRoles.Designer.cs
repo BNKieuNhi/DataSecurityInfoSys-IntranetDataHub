@@ -46,6 +46,7 @@
             this.cbRoleUser = new System.Windows.Forms.ComboBox();
             this.lblRoleUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ListUsers)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -97,18 +98,21 @@
             this.grantToolStripMenuItem.Name = "grantToolStripMenuItem";
             this.grantToolStripMenuItem.Size = new System.Drawing.Size(143, 27);
             this.grantToolStripMenuItem.Text = "Grant Privileges";
+            this.grantToolStripMenuItem.Click += new System.EventHandler(this.grantToolStripMenuItem_Click);
             // 
             // checkPrivilegesToolStripMenuItem
             // 
             this.checkPrivilegesToolStripMenuItem.Name = "checkPrivilegesToolStripMenuItem";
             this.checkPrivilegesToolStripMenuItem.Size = new System.Drawing.Size(146, 27);
             this.checkPrivilegesToolStripMenuItem.Text = "Check Privileges";
+            this.checkPrivilegesToolStripMenuItem.Click += new System.EventHandler(this.checkPrivilegesToolStripMenuItem_Click);
             // 
             // roleToolStripMenuItem
             // 
             this.roleToolStripMenuItem.Name = "roleToolStripMenuItem";
             this.roleToolStripMenuItem.Size = new System.Drawing.Size(64, 27);
             this.roleToolStripMenuItem.Text = "Roles";
+            this.roleToolStripMenuItem.Click += new System.EventHandler(this.roleToolStripMenuItem_Click);
             // 
             // usersToolStripMenuItem
             // 
@@ -136,7 +140,7 @@
             this.dataGridView_ListUsers.Name = "dataGridView_ListUsers";
             this.dataGridView_ListUsers.RowHeadersWidth = 51;
             this.dataGridView_ListUsers.RowTemplate.Height = 24;
-            this.dataGridView_ListUsers.Size = new System.Drawing.Size(776, 260);
+            this.dataGridView_ListUsers.Size = new System.Drawing.Size(892, 260);
             this.dataGridView_ListUsers.TabIndex = 21;
             // 
             // menuStrip1
@@ -149,10 +153,11 @@
             this.checkPrivilegesToolStripMenuItem,
             this.grantToolStripMenuItem,
             this.grantRolesToolStripMenuItem,
-            this.revokePrivilegesRoleToolStripMenuItem});
+            this.revokePrivilegesRoleToolStripMenuItem,
+            this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(778, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(894, 31);
             this.menuStrip1.TabIndex = 19;
             this.menuStrip1.Text = "menuQuanLy";
             // 
@@ -203,11 +208,18 @@
             this.label2.TabIndex = 28;
             this.label2.Text = "FROM";
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(125, 27);
+            this.toolStripMenuItem1.Text = "Col Privileges";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
             // fRevokeRoles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 411);
+            this.ClientSize = new System.Drawing.Size(894, 411);
             this.Controls.Add(this.cbRoleUser);
             this.Controls.Add(this.lblRoleUser);
             this.Controls.Add(this.label2);
@@ -246,5 +258,6 @@
         private System.Windows.Forms.ComboBox cbRoleUser;
         private System.Windows.Forms.Label lblRoleUser;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
     }
 }

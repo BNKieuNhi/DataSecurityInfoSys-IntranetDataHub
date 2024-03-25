@@ -53,9 +53,7 @@
             this.lblIDUser = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnRecord = new System.Windows.Forms.Button();
-            this.radBtnLock = new System.Windows.Forms.RadioButton();
-            this.radBtnUnlock = new System.Windows.Forms.RadioButton();
-            this.radBtnCascade = new System.Windows.Forms.RadioButton();
+            this.colPrivilegesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ListUsers)).BeginInit();
             this.SuspendLayout();
@@ -70,10 +68,11 @@
             this.checkPrivilegesToolStripMenuItem,
             this.grantToolStripMenuItem,
             this.grantRolesToolStripMenuItem,
-            this.revokePrivilegesRoleToolStripMenuItem});
+            this.revokePrivilegesRoleToolStripMenuItem,
+            this.colPrivilegesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(776, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(850, 31);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuQuanLy";
             // 
@@ -82,41 +81,42 @@
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
             this.usersToolStripMenuItem.Size = new System.Drawing.Size(65, 27);
             this.usersToolStripMenuItem.Text = "Users";
+            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click_1);
             // 
             // roleToolStripMenuItem
             // 
             this.roleToolStripMenuItem.Name = "roleToolStripMenuItem";
             this.roleToolStripMenuItem.Size = new System.Drawing.Size(64, 27);
             this.roleToolStripMenuItem.Text = "Roles";
-            this.roleToolStripMenuItem.Click += new System.EventHandler(this.roleToolStripMenuItem_Click);
+            this.roleToolStripMenuItem.Click += new System.EventHandler(this.roleToolStripMenuItem_Click_1);
             // 
             // checkPrivilegesToolStripMenuItem
             // 
             this.checkPrivilegesToolStripMenuItem.Name = "checkPrivilegesToolStripMenuItem";
             this.checkPrivilegesToolStripMenuItem.Size = new System.Drawing.Size(146, 27);
             this.checkPrivilegesToolStripMenuItem.Text = "Check Privileges";
-            this.checkPrivilegesToolStripMenuItem.Click += new System.EventHandler(this.checkPrivilegesToolStripMenuItem_Click);
+            this.checkPrivilegesToolStripMenuItem.Click += new System.EventHandler(this.checkPrivilegesToolStripMenuItem_Click_1);
             // 
             // grantToolStripMenuItem
             // 
             this.grantToolStripMenuItem.Name = "grantToolStripMenuItem";
             this.grantToolStripMenuItem.Size = new System.Drawing.Size(143, 27);
             this.grantToolStripMenuItem.Text = "Grant Privileges";
-            this.grantToolStripMenuItem.Click += new System.EventHandler(this.grantToolStripMenuItem_Click);
+            this.grantToolStripMenuItem.Click += new System.EventHandler(this.grantToolStripMenuItem_Click_1);
             // 
             // grantRolesToolStripMenuItem
             // 
             this.grantRolesToolStripMenuItem.Name = "grantRolesToolStripMenuItem";
             this.grantRolesToolStripMenuItem.Size = new System.Drawing.Size(112, 27);
             this.grantRolesToolStripMenuItem.Text = "Grant Roles";
-            this.grantRolesToolStripMenuItem.Click += new System.EventHandler(this.grantRolesToolStripMenuItem_Click);
+            this.grantRolesToolStripMenuItem.Click += new System.EventHandler(this.grantRolesToolStripMenuItem_Click_1);
             // 
             // revokePrivilegesRoleToolStripMenuItem
             // 
             this.revokePrivilegesRoleToolStripMenuItem.Name = "revokePrivilegesRoleToolStripMenuItem";
             this.revokePrivilegesRoleToolStripMenuItem.Size = new System.Drawing.Size(123, 27);
             this.revokePrivilegesRoleToolStripMenuItem.Text = "Revoke Roles";
-            this.revokePrivilegesRoleToolStripMenuItem.Click += new System.EventHandler(this.revokePrivilegesRoleToolStripMenuItem_Click);
+            this.revokePrivilegesRoleToolStripMenuItem.Click += new System.EventHandler(this.revokePrivilegesRoleToolStripMenuItem_Click_1);
             // 
             // contextMenuStrip1
             // 
@@ -126,15 +126,13 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSearch.Location = new System.Drawing.Point(427, 42);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(98, 33);
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Tìm kiếm";
-            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dataGridView_ListUsers
@@ -144,7 +142,7 @@
             this.dataGridView_ListUsers.Name = "dataGridView_ListUsers";
             this.dataGridView_ListUsers.RowHeadersWidth = 51;
             this.dataGridView_ListUsers.RowTemplate.Height = 24;
-            this.dataGridView_ListUsers.Size = new System.Drawing.Size(776, 260);
+            this.dataGridView_ListUsers.Size = new System.Drawing.Size(859, 260);
             this.dataGridView_ListUsers.TabIndex = 3;
             this.dataGridView_ListUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ListUsers_CellContentClick);
             // 
@@ -171,7 +169,7 @@
             this.txtUName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUName.Location = new System.Drawing.Point(118, 417);
             this.txtUName.Name = "txtUName";
-            this.txtUName.Size = new System.Drawing.Size(259, 31);
+            this.txtUName.Size = new System.Drawing.Size(280, 31);
             this.txtUName.TabIndex = 8;
             // 
             // lblUID
@@ -187,16 +185,16 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(499, 417);
+            this.txtPassword.Location = new System.Drawing.Point(532, 414);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(261, 31);
+            this.txtPassword.Size = new System.Drawing.Size(282, 31);
             this.txtPassword.TabIndex = 10;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(402, 420);
+            this.lblPassword.Location = new System.Drawing.Point(435, 417);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(91, 25);
             this.lblPassword.TabIndex = 9;
@@ -204,38 +202,35 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.PaleGreen;
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(116, 467);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(98, 33);
             this.btnAdd.TabIndex = 11;
             this.btnAdd.Text = "Thêm";
-            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Location = new System.Drawing.Point(220, 467);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(98, 33);
             this.btnEdit.TabIndex = 12;
             this.btnEdit.Text = "Sửa";
-            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.UseVisualStyleBackColor = true;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.LightPink;
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(324, 467);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(98, 33);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnView
@@ -255,7 +250,7 @@
             this.txtUId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUId.Location = new System.Drawing.Point(118, 377);
             this.txtUId.Name = "txtUId";
-            this.txtUId.Size = new System.Drawing.Size(259, 31);
+            this.txtUId.Size = new System.Drawing.Size(280, 31);
             this.txtUId.TabIndex = 16;
             // 
             // lblIDUser
@@ -281,57 +276,27 @@
             // 
             // btnRecord
             // 
-            this.btnRecord.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnRecord.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecord.Location = new System.Drawing.Point(428, 467);
             this.btnRecord.Name = "btnRecord";
             this.btnRecord.Size = new System.Drawing.Size(98, 33);
             this.btnRecord.TabIndex = 18;
             this.btnRecord.Text = "Ghi";
-            this.btnRecord.UseVisualStyleBackColor = false;
+            this.btnRecord.UseVisualStyleBackColor = true;
             this.btnRecord.Click += new System.EventHandler(this.btnRecord_Click);
             // 
-            // radBtnLock
+            // colPrivilegesToolStripMenuItem
             // 
-            this.radBtnLock.AutoSize = true;
-            this.radBtnLock.Location = new System.Drawing.Point(499, 385);
-            this.radBtnLock.Name = "radBtnLock";
-            this.radBtnLock.Size = new System.Drawing.Size(57, 20);
-            this.radBtnLock.TabIndex = 21;
-            this.radBtnLock.TabStop = true;
-            this.radBtnLock.Text = "Lock";
-            this.radBtnLock.UseVisualStyleBackColor = true;
-            // 
-            // radBtnUnlock
-            // 
-            this.radBtnUnlock.AutoSize = true;
-            this.radBtnUnlock.Location = new System.Drawing.Point(573, 385);
-            this.radBtnUnlock.Name = "radBtnUnlock";
-            this.radBtnUnlock.Size = new System.Drawing.Size(70, 20);
-            this.radBtnUnlock.TabIndex = 22;
-            this.radBtnUnlock.TabStop = true;
-            this.radBtnUnlock.Text = "Unlock";
-            this.radBtnUnlock.UseVisualStyleBackColor = true;
-            // 
-            // radBtnCascade
-            // 
-            this.radBtnCascade.AutoSize = true;
-            this.radBtnCascade.Location = new System.Drawing.Point(663, 385);
-            this.radBtnCascade.Name = "radBtnCascade";
-            this.radBtnCascade.Size = new System.Drawing.Size(92, 20);
-            this.radBtnCascade.TabIndex = 23;
-            this.radBtnCascade.TabStop = true;
-            this.radBtnCascade.Text = "CASCADE";
-            this.radBtnCascade.UseVisualStyleBackColor = true;
+            this.colPrivilegesToolStripMenuItem.Name = "colPrivilegesToolStripMenuItem";
+            this.colPrivilegesToolStripMenuItem.Size = new System.Drawing.Size(125, 27);
+            this.colPrivilegesToolStripMenuItem.Text = "Col Privileges";
+            this.colPrivilegesToolStripMenuItem.Click += new System.EventHandler(this.colPrivilegesToolStripMenuItem_Click);
             // 
             // fUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 544);
-            this.Controls.Add(this.radBtnCascade);
-            this.Controls.Add(this.radBtnUnlock);
-            this.Controls.Add(this.radBtnLock);
+            this.ClientSize = new System.Drawing.Size(850, 544);
             this.Controls.Add(this.btnRecord);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtUId);
@@ -351,7 +316,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "fUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "User List";
+            this.Text = "fUsers";
             this.Load += new System.EventHandler(this.fUsers_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -387,8 +352,6 @@
         private System.Windows.Forms.Label lblIDUser;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnRecord;
-        private System.Windows.Forms.RadioButton radBtnLock;
-        private System.Windows.Forms.RadioButton radBtnUnlock;
-        private System.Windows.Forms.RadioButton radBtnCascade;
+        private System.Windows.Forms.ToolStripMenuItem colPrivilegesToolStripMenuItem;
     }
 }

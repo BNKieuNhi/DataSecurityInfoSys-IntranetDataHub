@@ -19,7 +19,7 @@ namespace QLDuLieuNoiBo
         public static string State = "-1";
 
         string dbUser = "SYS";
-        string dbUser_password = "21127659";
+        string dbUser_password = "21127495";
         bool sys = true;
         #endregion
 
@@ -94,8 +94,10 @@ namespace QLDuLieuNoiBo
             con = new OracleConnection(conStr);
             try
             {
-                con.Open();
-
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
                 string selectedRole = "";
                 string whereClause = ""; // Điều kiện WHERE cho truy vấn SQL
 
@@ -155,7 +157,11 @@ namespace QLDuLieuNoiBo
                     try
                     {
                         // Mở kết nối
-                        con.Open();
+
+                        if (con.State == ConnectionState.Closed)
+                        {
+                            con.Open();
+                        }
                         OracleCommand cmd = con.CreateCommand();
                         cmd.CommandText = sql;
                         Console.WriteLine(cmd.CommandText);
@@ -204,6 +210,34 @@ namespace QLDuLieuNoiBo
         {
             fGrantRoles _fGrantRoles = new fGrantRoles();
             _fGrantRoles.Show();
+            this.Hide();
+        }
+
+        private void roleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fAddRole _fAddRole = new fAddRole();
+            _fAddRole.Show();
+            this.Hide();
+        }
+
+        private void checkPrivilegesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fCheckPrivileges _fCheckPrivileges = new fCheckPrivileges();
+            _fCheckPrivileges.Show();
+            this.Hide();
+        }
+
+        private void grantToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fGrantPrivileges _fGrantPrivileges = new fGrantPrivileges();
+            _fGrantPrivileges.Show();
+            this.Hide();
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            fColumnPriv _fColumnPriv = new fColumnPriv();
+            _fColumnPriv.Show();
             this.Hide();
         }
     }

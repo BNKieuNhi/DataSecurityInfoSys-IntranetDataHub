@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 using Oracle.ManagedDataAccess.Client;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -23,7 +22,7 @@ namespace QLDuLieuNoiBo
         string password = "";
 
         string dbUser = "SYS";
-        string dbUser_password = "21127659";
+        string dbUser_password = "21127495";
         bool sys = true;
         #endregion
         public fUsers()
@@ -88,15 +87,10 @@ namespace QLDuLieuNoiBo
                     lblPassword.Enabled = true;
                     txtUId.Enabled = true;
                     txtPassword.Enabled = false;
-                    
+
                     txtUId.Text = "";
                     txtUName.Text = "";
                     txtPassword.Text = "";
-
-                    radBtnLock.Hide();
-                    radBtnUnlock.Hide();
-                    radBtnCascade.Hide();
-
                     break;
                 default:
                     break;
@@ -124,7 +118,7 @@ namespace QLDuLieuNoiBo
                 // Xử lý các ngoại lệ nếu có
                 Console.WriteLine("Lỗi kết nối: " + ex.Message);
             }
-            
+
             lblPassword.Enabled = false;
             txtPassword.Enabled = false;
             btnRecord.Enabled = false;
@@ -197,9 +191,6 @@ namespace QLDuLieuNoiBo
             txtUName.Text = "";
             txtPassword.Text = "";
 
-            radBtnLock.Show();
-            radBtnUnlock.Show();
-
             State = "Update";
             txtUName.Focus();
         }
@@ -219,8 +210,6 @@ namespace QLDuLieuNoiBo
             txtUId.Text = "";
             txtUName.Text = "";
             txtPassword.Text = "";
-
-            radBtnCascade.Show();
 
             State = "Delete";
             txtUName.Focus();
@@ -255,7 +244,7 @@ namespace QLDuLieuNoiBo
         {
             int index = e.RowIndex;
             DataGridViewRow selectedRow = dataGridView_ListUsers.Rows[index];
-            
+
             if (selectedRow != null)
             {
                 txtUId.Text = selectedRow.Cells["USER_ID"].Value.ToString();
@@ -354,15 +343,10 @@ namespace QLDuLieuNoiBo
                     // Mở kết nối
                     con.Open();
 
-                    if (radBtnLock.Checked == false && radBtnUnlock.Checked == false)
-                    {
-                        MessageBox.Show("Vui lòng chọn Lock hoặc Unlock account!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        return;
-                    }
-
                     // Kiểm tra xem username đã tồn tại chưa
                     string username = txtUName.Text.Trim().ToUpper();
                     string sqlCheckUser = "SELECT COUNT(*) FROM DBA_USERS WHERE USERNAME = '" + username + "'";
+                    Console.WriteLine(sqlCheckUser);
                     OracleCommand cmdCheckUser = new OracleCommand(sqlCheckUser, con);
                     int count = Convert.ToInt32(cmdCheckUser.ExecuteScalar());
                     if (count == 0)
@@ -373,19 +357,8 @@ namespace QLDuLieuNoiBo
 
                     // Thực hiện cập nhật mật khẩu cho người dùng
                     string newPassword = txtPassword.Text.Trim();
-                    string sql = "";
-
-                    if (radBtnLock.Checked == true)
-                    {
-                        sql = "ALTER USER " + username + " IDENTIFIED BY " + newPassword + " ACCOUNT LOCK";
-                    }
-                    if (radBtnUnlock.Checked == true)
-                    {
-                        sql = "ALTER USER " + username + " IDENTIFIED BY " + newPassword + " ACCOUNT UNLOCK";
-                    }
-
                     OracleCommand updateCRUD = con.CreateCommand();
-                    updateCRUD.CommandText = sql;
+                    updateCRUD.CommandText = "ALTER USER " + username + " IDENTIFIED BY " + newPassword;
                     int rowsUpdated = updateCRUD.ExecuteNonQuery();
                     if (rowsUpdated != 0)
                     {
@@ -405,6 +378,12 @@ namespace QLDuLieuNoiBo
                         OracleCommand setFalse = con.CreateCommand();
                         setFalse.CommandText = "ALTER SESSION SET \"_ORACLE_SCRIPT\" = FALSE";
                         setFalse.ExecuteNonQuery();
+
+                        btnAdd.Enabled = true;
+                        btnDelete.Enabled = true;
+                        btnEdit.Enabled = true;
+                        btnView.Enabled = true;
+                        txtUId.Enabled = true;
                     }
                     else
                     {
@@ -445,7 +424,7 @@ namespace QLDuLieuNoiBo
 
                     // Tạo câu lệnh SQL để xóa người dùng
                     string sqlDeleteUser = "DROP USER " + username;
-                    if (radBtnCascade.Checked)
+                    //if (chkCascade.Checked)
                     {
                         sqlDeleteUser += " CASCADE";
                     }
@@ -484,18 +463,17 @@ namespace QLDuLieuNoiBo
             }
         }
         #endregion
-
-        private void revokePrivilegesRoleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void roleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fRevokeRoles _fRevokeRoles = new fRevokeRoles();
-            _fRevokeRoles.Show();
+            fAddRole _fAddRole = new fAddRole();
+            _fAddRole.Show();
             this.Hide();
         }
 
-        private void grantRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fGrantRoles _fGrantRoles = new fGrantRoles();
-            _fGrantRoles.Show();
+            fUsers _fUser = new fUsers();
+            _fUser.Show();
             this.Hide();
         }
 
@@ -508,12 +486,77 @@ namespace QLDuLieuNoiBo
 
         private void grantToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            fGrantPrivileges _fGrantPrivileges = new fGrantPrivileges();
+            _fGrantPrivileges.Show();
+            this.Hide();
+        }
+
+        private void grantRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fGrantRoles _fGrantRoles = new fGrantRoles();
+            _fGrantRoles.Show();
+            this.Hide();
+        }
+
+        private void colPrivilege_Click(object sender, EventArgs e)
+        {
+            fColumnPriv _fColumnPriv = new fColumnPriv();
+            _fColumnPriv.Show();
+            this.Hide();
+        }
+
+        private void revokePrivilegesRoleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fRevokeRoles _fRevokeRoles = new fRevokeRoles();
+            _fRevokeRoles.Show();
+            this.Hide();
+        }
+
+        private void usersToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
 
         }
 
-        private void roleToolStripMenuItem_Click(object sender, EventArgs e)
+        private void roleToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
+            fAddRole _fAddRole = new fAddRole();
+            _fAddRole.Show();
+            this.Hide();
+        }
 
+        private void checkPrivilegesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fCheckPrivileges _fCheckPrivileges = new fCheckPrivileges();
+            _fCheckPrivileges.Show();
+            this.Hide();
+        }
+
+        private void grantToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fGrantPrivileges _fGrantPrivileges = new fGrantPrivileges();
+            _fGrantPrivileges.Show();
+            this.Hide();
+        }
+
+        private void grantRolesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fGrantRoles _fGrantRoles = new fGrantRoles();
+            _fGrantRoles.Show();
+            this.Hide();
+        }
+
+        private void revokePrivilegesRoleToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fRevokeRoles _fRevokeRoles = new fRevokeRoles();
+            _fRevokeRoles.Show();
+            this.Hide();
+        }
+
+        private void colPrivilegesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fColumnPriv _fColumnPriv = new fColumnPriv();
+            _fColumnPriv.Show();
+            this.Hide();
         }
     }
 }

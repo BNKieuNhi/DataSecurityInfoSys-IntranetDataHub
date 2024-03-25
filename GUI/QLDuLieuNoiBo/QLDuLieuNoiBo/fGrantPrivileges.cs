@@ -82,10 +82,15 @@ namespace QLDuLieuNoiBo
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            con.Open();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+
             if (txtInput.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Vui lòng nhap ten user/roles", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //con.Close();
                 return;
             }
 
@@ -177,10 +182,15 @@ namespace QLDuLieuNoiBo
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            con.Open();
+            if (con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+
             if (txtInput.Text.Trim().Length == 0)
             {
                 MessageBox.Show("Vui lòng nhap ten nguoi dung/vai tro", "Thong bao", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //con.Close();
                 return;
             }
 
@@ -270,7 +280,10 @@ namespace QLDuLieuNoiBo
 
             try
             {
-                con.Open();
+                if (con.State == ConnectionState.Closed)
+                {
+                    con.Open();
+                }
 
                 OracleCommand oc = con.CreateCommand();
                 oc.CommandText = "SELECT table_name FROM DBA_TABLES WHERE OWNER = 'U_ADMIN'";
@@ -295,7 +308,89 @@ namespace QLDuLieuNoiBo
                 Console.WriteLine("Loi ket noi: " + ex.Message);
             }
         }
-        
-       
+
+        private void roleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fAddRole _fAddRole = new fAddRole();
+            _fAddRole.Show();
+            this.Hide();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fUsers _fUser = new fUsers();
+            _fUser.Show();
+            this.Hide();
+        }
+
+        private void checkPrivilegesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fCheckPrivileges _fCheckPrivileges = new fCheckPrivileges();
+            _fCheckPrivileges.Show();
+            this.Hide();
+        }
+
+        private void grantToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fGrantPrivileges _fGrantPrivileges = new fGrantPrivileges();
+            _fGrantPrivileges.Show();
+            this.Hide();
+        }
+
+        private void grantRolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fGrantRoles _fGrantRoles = new fGrantRoles();
+            _fGrantRoles.Show();
+            this.Hide();
+        }
+
+        private void colPrivilege_Click(object sender, EventArgs e)
+        {
+            fColumnPriv _fColumnPriv = new fColumnPriv();
+            _fColumnPriv.Show();
+            this.Hide();
+        }
+
+        private void revokePrivilegesRoleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fRevokeRoles _fRevokeRoles = new fRevokeRoles();
+            _fRevokeRoles.Show();
+            this.Hide();
+        }
+
+        private void usersToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fUsers _fUser = new fUsers();
+            _fUser.Show();
+            this.Hide();
+        }
+
+        private void roleToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fAddRole _fAddRoles = new fAddRole();
+            _fAddRoles.Show();
+            this.Hide();
+        }
+
+        private void checkPrivilegesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fCheckPrivileges _fCheckPrivileges = new fCheckPrivileges();
+            _fCheckPrivileges.Show();
+            this.Hide();
+        }
+
+        private void grantRolesToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            fGrantRoles _fGrantRoles = new fGrantRoles();
+            _fGrantRoles.Show();
+            this.Hide();
+        }
+
+        private void colPrivilegesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fColumnPriv _fColumnPriv = new fColumnPriv();
+            _fColumnPriv.Show();
+            this.Hide();
+        }
     }
 }
