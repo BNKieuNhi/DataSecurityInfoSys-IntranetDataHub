@@ -70,7 +70,7 @@
             this.revokePrivilegesRoleToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(830, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(776, 31);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuQuanLy";
             // 
@@ -107,8 +107,9 @@
             // revokePrivilegesRoleToolStripMenuItem
             // 
             this.revokePrivilegesRoleToolStripMenuItem.Name = "revokePrivilegesRoleToolStripMenuItem";
-            this.revokePrivilegesRoleToolStripMenuItem.Size = new System.Drawing.Size(192, 27);
-            this.revokePrivilegesRoleToolStripMenuItem.Text = "Revoke Privileges Role";
+            this.revokePrivilegesRoleToolStripMenuItem.Size = new System.Drawing.Size(123, 27);
+            this.revokePrivilegesRoleToolStripMenuItem.Text = "Revoke Roles";
+            this.revokePrivilegesRoleToolStripMenuItem.Click += new System.EventHandler(this.revokePrivilegesRoleToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -134,7 +135,7 @@
             this.dataGridView_ListUsers.Name = "dataGridView_ListUsers";
             this.dataGridView_ListUsers.RowHeadersWidth = 51;
             this.dataGridView_ListUsers.RowTemplate.Height = 24;
-            this.dataGridView_ListUsers.Size = new System.Drawing.Size(830, 260);
+            this.dataGridView_ListUsers.Size = new System.Drawing.Size(776, 260);
             this.dataGridView_ListUsers.TabIndex = 3;
             this.dataGridView_ListUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_ListUsers_CellContentClick);
             // 
@@ -161,7 +162,7 @@
             this.txtUName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUName.Location = new System.Drawing.Point(118, 417);
             this.txtUName.Name = "txtUName";
-            this.txtUName.Size = new System.Drawing.Size(280, 31);
+            this.txtUName.Size = new System.Drawing.Size(259, 31);
             this.txtUName.TabIndex = 8;
             // 
             // lblUID
@@ -177,16 +178,16 @@
             // txtPassword
             // 
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(532, 414);
+            this.txtPassword.Location = new System.Drawing.Point(499, 417);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(282, 31);
+            this.txtPassword.Size = new System.Drawing.Size(261, 31);
             this.txtPassword.TabIndex = 10;
             // 
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(435, 417);
+            this.lblPassword.Location = new System.Drawing.Point(402, 420);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(91, 25);
             this.lblPassword.TabIndex = 9;
@@ -242,7 +243,7 @@
             this.txtUId.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUId.Location = new System.Drawing.Point(118, 377);
             this.txtUId.Name = "txtUId";
-            this.txtUId.Size = new System.Drawing.Size(280, 31);
+            this.txtUId.Size = new System.Drawing.Size(259, 31);
             this.txtUId.TabIndex = 16;
             // 
             // lblIDUser
@@ -281,7 +282,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(830, 544);
+            this.ClientSize = new System.Drawing.Size(776, 544);
             this.Controls.Add(this.btnRecord);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtUId);
@@ -301,7 +302,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Name = "fUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fUsers";
+            this.Text = "User List";
             this.Load += new System.EventHandler(this.fUsers_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

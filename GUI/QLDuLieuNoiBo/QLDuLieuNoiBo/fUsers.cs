@@ -463,5 +463,12 @@ namespace QLDuLieuNoiBo
             }
         }
         #endregion
+
+        private void revokePrivilegesRoleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fRevokeRoles _fRevokeRoles = new fRevokeRoles();
+            _fRevokeRoles.Show();
+            this.Hide();
+        }
     }
 }
