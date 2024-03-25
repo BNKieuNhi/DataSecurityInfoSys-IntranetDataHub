@@ -53,6 +53,9 @@
             this.lblIDUser = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnRecord = new System.Windows.Forms.Button();
+            this.radBtnLock = new System.Windows.Forms.RadioButton();
+            this.radBtnUnlock = new System.Windows.Forms.RadioButton();
+            this.radBtnCascade = new System.Windows.Forms.RadioButton();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ListUsers)).BeginInit();
             this.SuspendLayout();
@@ -282,11 +285,47 @@
             this.btnRecord.UseVisualStyleBackColor = true;
             this.btnRecord.Click += new System.EventHandler(this.btnRecord_Click);
             // 
+            // radBtnLock
+            // 
+            this.radBtnLock.AutoSize = true;
+            this.radBtnLock.Location = new System.Drawing.Point(499, 385);
+            this.radBtnLock.Name = "radBtnLock";
+            this.radBtnLock.Size = new System.Drawing.Size(57, 20);
+            this.radBtnLock.TabIndex = 21;
+            this.radBtnLock.TabStop = true;
+            this.radBtnLock.Text = "Lock";
+            this.radBtnLock.UseVisualStyleBackColor = true;
+            // 
+            // radBtnUnlock
+            // 
+            this.radBtnUnlock.AutoSize = true;
+            this.radBtnUnlock.Location = new System.Drawing.Point(573, 385);
+            this.radBtnUnlock.Name = "radBtnUnlock";
+            this.radBtnUnlock.Size = new System.Drawing.Size(70, 20);
+            this.radBtnUnlock.TabIndex = 22;
+            this.radBtnUnlock.TabStop = true;
+            this.radBtnUnlock.Text = "Unlock";
+            this.radBtnUnlock.UseVisualStyleBackColor = true;
+            // 
+            // radBtnCascade
+            // 
+            this.radBtnCascade.AutoSize = true;
+            this.radBtnCascade.Location = new System.Drawing.Point(663, 385);
+            this.radBtnCascade.Name = "radBtnCascade";
+            this.radBtnCascade.Size = new System.Drawing.Size(92, 20);
+            this.radBtnCascade.TabIndex = 23;
+            this.radBtnCascade.TabStop = true;
+            this.radBtnCascade.Text = "CASCADE";
+            this.radBtnCascade.UseVisualStyleBackColor = true;
+            // 
             // fUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(776, 544);
+            this.Controls.Add(this.radBtnCascade);
+            this.Controls.Add(this.radBtnUnlock);
+            this.Controls.Add(this.radBtnLock);
             this.Controls.Add(this.btnRecord);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtUId);
@@ -342,5 +381,8 @@
         private System.Windows.Forms.Label lblIDUser;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnRecord;
+        private System.Windows.Forms.RadioButton radBtnLock;
+        private System.Windows.Forms.RadioButton radBtnUnlock;
+        private System.Windows.Forms.RadioButton radBtnCascade;
     }
 }
