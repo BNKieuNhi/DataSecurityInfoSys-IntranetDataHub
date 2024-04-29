@@ -36,6 +36,7 @@
             this.grantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grantRolesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.revokePrivilegesRoleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colPrivilegesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.btnSearch = new System.Windows.Forms.Button();
             this.dataGridView_ListUsers = new System.Windows.Forms.DataGridView();
@@ -56,7 +57,6 @@
             this.radBtnLock = new System.Windows.Forms.RadioButton();
             this.radBtnUnlock = new System.Windows.Forms.RadioButton();
             this.radBtnCascade = new System.Windows.Forms.RadioButton();
-            this.colPrivilegesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ListUsers)).BeginInit();
             this.SuspendLayout();
@@ -119,6 +119,13 @@
             this.revokePrivilegesRoleToolStripMenuItem.Size = new System.Drawing.Size(123, 27);
             this.revokePrivilegesRoleToolStripMenuItem.Text = "Revoke Roles";
             this.revokePrivilegesRoleToolStripMenuItem.Click += new System.EventHandler(this.revokePrivilegesRoleToolStripMenuItem_Click);
+            // 
+            // colPrivilegesToolStripMenuItem
+            // 
+            this.colPrivilegesToolStripMenuItem.Name = "colPrivilegesToolStripMenuItem";
+            this.colPrivilegesToolStripMenuItem.Size = new System.Drawing.Size(125, 27);
+            this.colPrivilegesToolStripMenuItem.Text = "Col Privileges";
+            this.colPrivilegesToolStripMenuItem.Click += new System.EventHandler(this.colPrivilegesToolStripMenuItem_Click);
             // 
             // contextMenuStrip1
             // 
@@ -325,12 +332,6 @@
             this.radBtnCascade.TabStop = true;
             this.radBtnCascade.Text = "CASCADE";
             this.radBtnCascade.UseVisualStyleBackColor = true;
-            // 
-            // colPrivilegesToolStripMenuItem
-            // 
-            this.colPrivilegesToolStripMenuItem.Name = "colPrivilegesToolStripMenuItem";
-            this.colPrivilegesToolStripMenuItem.Size = new System.Drawing.Size(125, 27);
-            this.colPrivilegesToolStripMenuItem.Text = "Col Privileges";
             // 
             // fUsers
             // 

@@ -23,7 +23,9 @@ namespace QLDuLieuNoiBo
         string password = "";
 
         string dbUser = "SYS";
-        string dbUser_password = "21127659";
+        //string dbUser_password = "21127659";
+        string dbUser_password = "21127495";
+
         bool sys = true;
         #endregion
         public fUsers()
@@ -511,12 +513,23 @@ namespace QLDuLieuNoiBo
 
         private void grantToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fGrantPrivileges _fGrantPrivileges = new fGrantPrivileges();
+            _fGrantPrivileges.Show();
+            this.Hide();
         }
 
         private void roleToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            fAddRole _fAddRole = new fAddRole();
+            _fAddRole.Show();
+            this.Hide();
+        }
 
+        private void colPrivilegesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fColumnPriv _fColumnPriv = new fColumnPriv();
+            _fColumnPriv.Show();
+            this.Hide();
         }
     }
 }
