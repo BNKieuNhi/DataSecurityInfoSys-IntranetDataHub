@@ -29,7 +29,11 @@ namespace QLDuLieuNoiBo
         //string dbUser_password = "21127659";
         string dbUser_password = "21127495";
 
+<<<<<<< HEAD:GUI/QLDuLieuNoiBo/QLDuLieuNoiBo/Admin/fUsers.cs
         bool sys = false;
+=======
+        bool sys = true;
+>>>>>>> d2bd337147d6ab70f410a77f21fa8087d80b61e7:GUI/QLDuLieuNoiBo/QLDuLieuNoiBo/fUsers.cs
         #endregion
         public fUsers()
         {
@@ -494,6 +498,7 @@ namespace QLDuLieuNoiBo
             fColumnPriv _fColumnPriv = new fColumnPriv();
             _fColumnPriv.Show();
             this.Hide();
+<<<<<<< HEAD:GUI/QLDuLieuNoiBo/QLDuLieuNoiBo/Admin/fUsers.cs
         }
 
         private void dataGridView_ListUsers_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -506,6 +511,8 @@ namespace QLDuLieuNoiBo
                 txtUId.Text = selectedRow.Cells["USER_ID"].Value.ToString();
                 txtUName.Text = selectedRow.Cells["USERNAME"].Value.ToString();
             }
+=======
+>>>>>>> d2bd337147d6ab70f410a77f21fa8087d80b61e7:GUI/QLDuLieuNoiBo/QLDuLieuNoiBo/fUsers.cs
         }
     }
 }
