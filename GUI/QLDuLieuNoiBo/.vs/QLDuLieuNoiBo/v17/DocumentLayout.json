@@ -3,20 +3,36 @@
   "WorkspaceRootPath": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\fusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\fusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\admin\\fcolumnpriv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\admin\\fcolumnpriv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\fusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\fusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\admin\\fcolumnpriv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\admin\\fcolumnpriv.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\admin\\frevokeroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\admin\\frevokeroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\fmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\admin\\frevokeroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\admin\\frevokeroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\admin\\fgrantroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\admin\\fgrantroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\admin\\fgrantroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\admin\\fgrantroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\admin\\fgrantprivileges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\admin\\fgrantprivileges.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|d:\\21clc04\\hk8\\atbm_httt\\project\\gui\\qldulieunoibo\\qldulieunoibo\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D1275C35-B333-4E58-94CC-3BFA1CE77E36}|QLDuLieuNoiBo\\QLDuLieuNoiBo.csproj|solutionrelative:qldulieunoibo\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,54 +45,108 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "fMain.cs",
-              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fMain.cs",
-              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\fMain.cs",
-              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fMain.cs",
-              "RelativeToolTip": "QLDuLieuNoiBo\\fMain.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T00:45:41.838Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "fUsers.cs",
-              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fUsers.cs",
-              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\fUsers.cs",
-              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fUsers.cs",
-              "RelativeToolTip": "QLDuLieuNoiBo\\fUsers.cs",
-              "ViewState": "AQIAALgAAAAAAAAAAAAqwNAAAAAAAAAA",
+              "Title": "fColumnPriv.cs",
+              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\Admin\\fColumnPriv.cs",
+              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\Admin\\fColumnPriv.cs",
+              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\Admin\\fColumnPriv.cs",
+              "RelativeToolTip": "QLDuLieuNoiBo\\Admin\\fColumnPriv.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAAwBsAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T01:04:20.668Z",
+              "WhenOpened": "2024-04-29T15:01:36.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "fUsers.cs [Design]",
-              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fUsers.cs",
-              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\fUsers.cs",
-              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fUsers.cs [Design]",
-              "RelativeToolTip": "QLDuLieuNoiBo\\fUsers.cs [Design]",
+              "Title": "fColumnPriv.cs [Design]",
+              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\Admin\\fColumnPriv.cs",
+              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\Admin\\fColumnPriv.cs",
+              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\Admin\\fColumnPriv.cs [Design]",
+              "RelativeToolTip": "QLDuLieuNoiBo\\Admin\\fColumnPriv.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T00:48:30.47Z",
+              "WhenOpened": "2024-04-29T14:56:58.135Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "fMain.cs [Design]",
-              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fMain.cs",
-              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\fMain.cs",
-              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fMain.cs [Design]",
-              "RelativeToolTip": "QLDuLieuNoiBo\\fMain.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "fRevokeRoles.cs",
+              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\Admin\\fRevokeRoles.cs",
+              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\Admin\\fRevokeRoles.cs",
+              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\Admin\\fRevokeRoles.cs",
+              "RelativeToolTip": "QLDuLieuNoiBo\\Admin\\fRevokeRoles.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAkwGgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-24T00:43:04.991Z",
+              "WhenOpened": "2024-04-29T14:36:49.658Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "fRevokeRoles.cs [Design]",
+              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\Admin\\fRevokeRoles.cs",
+              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\Admin\\fRevokeRoles.cs",
+              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\Admin\\fRevokeRoles.cs [Design]",
+              "RelativeToolTip": "QLDuLieuNoiBo\\Admin\\fRevokeRoles.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T14:36:00.51Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "fGrantRoles.cs [Design]",
+              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\Admin\\fGrantRoles.cs",
+              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\Admin\\fGrantRoles.cs",
+              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\Admin\\fGrantRoles.cs [Design]",
+              "RelativeToolTip": "QLDuLieuNoiBo\\Admin\\fGrantRoles.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T14:26:14.752Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "fGrantRoles.cs",
+              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\Admin\\fGrantRoles.cs",
+              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\Admin\\fGrantRoles.cs",
+              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\Admin\\fGrantRoles.cs",
+              "RelativeToolTip": "QLDuLieuNoiBo\\Admin\\fGrantRoles.cs",
+              "ViewState": "AQIAAFAAAAAAAAAAAAAswEoAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T14:29:04.998Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "fLogin.cs [Design]",
+              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fLogin.cs",
+              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\fLogin.cs",
+              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\fLogin.cs [Design]",
+              "RelativeToolTip": "QLDuLieuNoiBo\\fLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T14:18:39.417Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "fGrantPrivileges.cs",
+              "DocumentMoniker": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\Admin\\fGrantPrivileges.cs",
+              "RelativeDocumentMoniker": "QLDuLieuNoiBo\\Admin\\fGrantPrivileges.cs",
+              "ToolTip": "D:\\21CLC04\\HK8\\ATBM_HTTT\\Project\\GUI\\QLDuLieuNoiBo\\QLDuLieuNoiBo\\Admin\\fGrantPrivileges.cs",
+              "RelativeToolTip": "QLDuLieuNoiBo\\Admin\\fGrantPrivileges.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAgwEwAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T14:13:41.203Z",
+              "EditorCaption": ""
             }
           ]
         }

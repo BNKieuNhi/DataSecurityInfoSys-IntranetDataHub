@@ -82,25 +82,91 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fMain.cs">
+    <Compile Include="Admin\fAddRole.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fMain.Designer.cs">
+    <Compile Include="Admin\fAddRole.Designer.cs">
+      <DependentUpon>fAddRole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\fCheckPrivileges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\fCheckPrivileges.Designer.cs">
+      <DependentUpon>fCheckPrivileges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\fColumnPriv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\fColumnPriv.Designer.cs">
+      <DependentUpon>fColumnPriv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\fGrantPrivileges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\fGrantPrivileges.Designer.cs">
+      <DependentUpon>fGrantPrivileges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\fGrantRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\fGrantRoles.Designer.cs">
+      <DependentUpon>fGrantRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\fMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="fUsers.cs">
+    <Compile Include="Admin\fRevokeRoles.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="fUsers.Designer.cs">
+    <Compile Include="Admin\fRevokeRoles.Designer.cs">
+      <DependentUpon>fRevokeRoles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fLogin.Designer.cs">
+      <DependentUpon>fLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Functions.cs" />
+    <Compile Include="Admin\fUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\fUsers.Designer.cs">
       <DependentUpon>fUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions\CustomParameter.cs" />
+    <Compile Include="Functions\Database.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="fMain.resx">
+    <EmbeddedResource Include="Admin\fAddRole.resx">
+      <DependentUpon>fAddRole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\fCheckPrivileges.resx">
+      <DependentUpon>fCheckPrivileges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\fColumnPriv.resx">
+      <DependentUpon>fColumnPriv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\fGrantPrivileges.resx">
+      <DependentUpon>fGrantPrivileges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\fGrantRoles.resx">
+      <DependentUpon>fGrantRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="fUsers.resx">
+    <EmbeddedResource Include="Admin\fRevokeRoles.resx">
+      <DependentUpon>fRevokeRoles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\fUsers.resx">
       <DependentUpon>fUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fLogin.resx">
+      <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -130,6 +196,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GiangVien\" />
+    <Folder Include="GiaoVu\" />
+    <Folder Include="NVCoBan\" />
+    <Folder Include="SinhVien\" />
+    <Folder Include="TruongDonVi\" />
+    <Folder Include="TruongKhoa\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets')" />
