@@ -131,9 +131,112 @@ ADD CONSTRAINT FK_PHANCONG_HOCPHAN
 FOREIGN KEY (MAHP)
 REFERENCES HOCPHAN (MAHP);
 
-
 CREATE OR REPLACE TRIGGER tinh_diem_tong_ket
 BEFORE INSERT OR UPDATE ON DANGKY
+FOR EACH ROW
+DECLARE
+    -- Khai báo biến để lưu trữ điểm thực hành, quá trình và cuối kỳ
+    diem_thuc_hanh NUMBER;
+    diem_qua_trinh NUMBER;
+    diem_cuoi_ky NUMBER;
+    diem_tong_ket NUMBER;
+    v_dtbtl NUMBER(5, 2);
+    v_sotctl NUMBER(2, 0);
+BEGIN
+    -- Lấy điểm thực hành, quá trình và cuối kỳ từ dữ liệu mới được chèn hoặc cập nhật
+    diem_thuc_hanh := :NEW.DIEMTH;
+    diem_qua_trinh := :NEW.DIEMQT;
+    diem_cuoi_ky := :NEW.DIEMCK;
+    
+    -- Tính toán điểm tổng kết dựa trên công thức tỉ lệ cho trước
+    diem_tong_ket := diem_thuc_hanh * 0.4 + diem_qua_trinh * 0.1 + diem_cuoi_ky * 0.5;
+    
+    -- Gán giá trị điểm tổng kết vào cột ĐIEMTK
+    :NEW.DIEMTK := diem_tong_ket;
+
+    -- Calculate DTBTL
+    IF :NEW.DIEMTK >= 5 THEN
+        BEGIN
+            -- Calculate SOTCTL
+            SELECT SUM(h.SOTC)
+            INTO v_sotctl
+            FROM HOCPHAN h
+            JOIN DANGKY d ON h.MAHP = d.MAHP
+            WHERE d.MASV = :NEW.MASV
+            AND d.DIEMTK >= 5;
+
+            -- Calculate DTBTL
+            SELECT SUM(:NEW.DIEMTK * h.SOTC) / v_sotctl
+            INTO v_dtbtl
+            FROM HOCPHAN h
+            WHERE h.MAHP = :NEW.MAHP;
+
+            -- Update DTBTL in SINHVIEN table
+            UPDATE SINHVIEN
+            SET DTBTL = v_dtbtl, SOTCTL = v_sotctl
+            WHERE MASV = :NEW.MASV;
+        EXCEPTION
+            WHEN NO_DATA_FOUND THEN
+                v_dtbtl := 0;
+        END;
+    END IF;
+END;
+/
+
+CREATE OR REPLACE TRIGGER tinh_diem_tong_ket
+BEFORE INSERT ON DANGKY
+FOR EACH ROW
+DECLARE
+    -- Khai báo biến để lưu trữ điểm thực hành, quá trình và cuối kỳ
+    diem_thuc_hanh NUMBER;
+    diem_qua_trinh NUMBER;
+    diem_cuoi_ky NUMBER;
+    diem_tong_ket NUMBER;
+    v_dtbtl NUMBER(5, 2);
+    v_sotctl NUMBER(2, 0);
+    BEGIN
+    -- Lấy điểm thực hành, quá trình và cuối kỳ từ dữ liệu mới được chèn hoặc cập nhật
+    diem_thuc_hanh := :NEW.DIEMTH;
+    diem_qua_trinh := :NEW.DIEMQT;
+    diem_cuoi_ky := :NEW.DIEMCK;
+    
+    -- Tính toán điểm tổng kết dựa trên công thức tỉ lệ cho trước
+    diem_tong_ket := diem_thuc_hanh*0.4 + diem_qua_trinh*0.1 + diem_cuoi_ky*0.5;
+    
+    -- Gán giá trị điểm tổng kết vào cột ĐIEMTK
+    :NEW.DIEMTK := diem_tong_ket;
+
+
+    -- Calculate DTBTL
+    IF :NEW.DIEMTK >= 5 THEN
+        BEGIN
+            -- Calculate SOTCTL
+            SELECT SUM(h.SOTC)
+            INTO v_sotctl
+            FROM HOCPHAN h
+            JOIN DANGKY d ON h.MAHP = d.MAHP
+            WHERE d.MASV = :NEW.MASV
+            AND d.DIEMTK >= 5;
+
+            -- Calculate DTBTL
+            SELECT SUM(:NEW.DIEMTK * h.SOTC) / v_sotctl
+            INTO v_dtbtl
+            FROM HOCPHAN h
+            WHERE h.MAHP = :NEW.MAHP;
+
+            -- Update DTBTL in SINHVIEN table
+            UPDATE SINHVIEN
+            SET DTBTL = v_dtbtl, SOTCTL = v_sotctl
+            WHERE MASV = :NEW.MASV;
+        EXCEPTION
+            WHEN NO_DATA_FOUND THEN
+                v_dtbtl := 0;
+        END;
+    END IF;
+END;
+/
+CREATE OR REPLACE TRIGGER capnhat_diem_tong_ket
+BEFORE INSERT ON DANGKY
 FOR EACH ROW
 DECLARE
     -- Khai báo biến để lưu trữ điểm thực hành, quá trình và cuối kỳ
