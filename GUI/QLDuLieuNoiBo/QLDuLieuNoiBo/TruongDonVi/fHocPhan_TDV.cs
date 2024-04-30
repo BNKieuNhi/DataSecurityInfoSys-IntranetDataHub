@@ -121,5 +121,11 @@ namespace QLDuLieuNoiBo.TruongDonVi
         {
             Reset();
         }
+
+        private void dgvHocPhan_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            new GiaoVu.fTTHocPhan(null).ShowDialog();
+            LoadHocPhan(null);
+        }
     }
 }

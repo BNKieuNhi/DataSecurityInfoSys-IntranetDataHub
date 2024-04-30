@@ -130,7 +130,6 @@
     <Compile Include="fLogin.Designer.cs">
       <DependentUpon>fLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Functions.cs" />
     <Compile Include="Admin\fUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +155,36 @@
     </Compile>
     <Compile Include="GiangVien\fPhanCong.Designer.cs">
       <DependentUpon>fPhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVu\fDonVi_GVU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVu\fDonVi_GVU.Designer.cs">
+      <DependentUpon>fDonVi_GVU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVu\fHocPhan_GVU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVu\fHocPhan_GVU.Designer.cs">
+      <DependentUpon>fHocPhan_GVU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVu\fKeHoach_GVU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVu\fKeHoach_GVU.Designer.cs">
+      <DependentUpon>fKeHoach_GVU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVu\fPhanCong_GVU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVu\fPhanCong_GVU.Designer.cs">
+      <DependentUpon>fPhanCong_GVU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVu\fTTHocPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVu\fTTHocPhan.Designer.cs">
+      <DependentUpon>fTTHocPhan.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaoVu\fTTSinhVien.cs">
       <SubType>Form</SubType>
@@ -205,6 +234,12 @@
     <Compile Include="NVCoBan\fSinhVien.Designer.cs">
       <DependentUpon>fSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="NVCoBan\fThongBao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVCoBan\fThongBao.Designer.cs">
+      <DependentUpon>fThongBao.cs</DependentUpon>
+    </Compile>
     <Compile Include="NVCoBan\fTTCaNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +248,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TruongDonVi\fHocPhan_TDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDonVi\fHocPhan_TDV.Designer.cs">
+      <DependentUpon>fHocPhan_TDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongDonVi\fMain_TDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDonVi\fMain_TDV.Designer.cs">
+      <DependentUpon>fMain_TDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongDonVi\fPhanCongTheoDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDonVi\fPhanCongTheoDV.Designer.cs">
+      <DependentUpon>fPhanCongTheoDV.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Admin\fAddRole.resx">
       <DependentUpon>fAddRole.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +302,21 @@
     <EmbeddedResource Include="GiangVien\fPhanCong.resx">
       <DependentUpon>fPhanCong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GiaoVu\fDonVi_GVU.resx">
+      <DependentUpon>fDonVi_GVU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoVu\fHocPhan_GVU.resx">
+      <DependentUpon>fHocPhan_GVU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoVu\fKeHoach_GVU.resx">
+      <DependentUpon>fKeHoach_GVU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoVu\fPhanCong_GVU.resx">
+      <DependentUpon>fPhanCong_GVU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoVu\fTTHocPhan.resx">
+      <DependentUpon>fTTHocPhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GiaoVu\fTTSinhVien.resx">
       <DependentUpon>fTTSinhVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -273,6 +341,9 @@
     <EmbeddedResource Include="NVCoBan\fSinhVien.resx">
       <DependentUpon>fSinhVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NVCoBan\fThongBao.resx">
+      <DependentUpon>fThongBao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="NVCoBan\fTTCaNhan.resx">
       <DependentUpon>fTTCaNhan.cs</DependentUpon>
     </EmbeddedResource>
@@ -285,6 +356,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TruongDonVi\fHocPhan_TDV.resx">
+      <DependentUpon>fHocPhan_TDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDonVi\fMain_TDV.resx">
+      <DependentUpon>fMain_TDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDonVi\fPhanCongTheoDV.resx">
+      <DependentUpon>fPhanCongTheoDV.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -307,7 +387,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SinhVien\" />
-    <Folder Include="TruongDonVi\" />
     <Folder Include="TruongKhoa\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -60,7 +60,7 @@
             this.dgvHocPhan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvHocPhan.Size = new System.Drawing.Size(908, 355);
             this.dgvHocPhan.TabIndex = 27;
-            this.dgvHocPhan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHocPhan_CellClick);
+            this.dgvHocPhan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHocPhan_CellDoubleClick);
             // 
             // btnThem
             // 

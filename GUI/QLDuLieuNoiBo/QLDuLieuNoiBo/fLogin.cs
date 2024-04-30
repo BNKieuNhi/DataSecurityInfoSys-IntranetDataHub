@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using QLDuLieuNoiBo.GiaoVu;
+using QLDuLieuNoiBo.TruongDonVi;
 
 namespace QLDuLieuNoiBo
 {
@@ -111,17 +112,17 @@ namespace QLDuLieuNoiBo
                     GiaoVu.fMain_GVU _fMain_GVU = new fMain_GVU(taikhoan);
                     _fMain_GVU.Show();
                     break;
-
+                case "truongdonvi":
+                    TruongDonVi.fMain_TDV _fMain_TDV = new fMain_TDV(taikhoan);
+                    _fMain_TDV.Show();
+                    break;
 /*              case "truongkhoa":
-                    fMain_TK _fMain_TK = new fMain_TK(username);
+                    fMain_TK _fMain_TK = new fMain_TK(taikhoan);
                     _fMain_TK.Show();
                     break;
-                case "truongdonvi":
-                    TruongDonVi.fMain _fMain = new fMain(username);
-                    _fMain.Show();
-                    break;*/
+*/
 /*                case "sinhvien":
-                    SinhVien.fMain _fMain = new fMain(username);
+                    SinhVien.fMain _fMain = new fMain(taikhoan);
                     _fMain.Show();
                     break;*/
             }
