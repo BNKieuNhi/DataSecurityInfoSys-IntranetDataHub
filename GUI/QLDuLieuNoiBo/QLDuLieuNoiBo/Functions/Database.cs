@@ -117,8 +117,9 @@ namespace QLDuLieuNoiBo
             {
                 using (cmd = new OracleCommand(sql, conn))
                 {
+                    cmd = conn.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    
+                    cmd.CommandText = sql;
                     Console.WriteLine(sql);
                     var res = cmd.ExecuteNonQuery();
                     return res;
@@ -130,6 +131,7 @@ namespace QLDuLieuNoiBo
                 return -100;
             }
         }
+
         public static int isUserValid(string username) // Hàm kiểm tra User có tồn tại hay không
         {
             OracleCommand cmd = new OracleCommand();
@@ -160,6 +162,43 @@ namespace QLDuLieuNoiBo
                 cmd = null;
                 return 0;
             }
+        }
+        public static DataTable GetDataToTable(string sql) //Lấy dữ liệu đổ vào bảng
+        {
+            OracleCommand command = new OracleCommand();
+            command.CommandText = sql;
+            command.Connection = conn;
+
+            OracleDataAdapter adapter = new OracleDataAdapter(command);
+            DataTable dataTable = new DataTable(); //create a new table
+            adapter.Fill(dataTable);
+
+            return dataTable;
+        }
+
+        public static int ExeCute(string sql) // chạy câu lệnh sql
+        {
+            //Gán kết nối
+            cmd = conn.CreateCommand();
+
+            //Gán lệnh SQL
+            cmd.CommandText = sql;
+            Console.WriteLine(sql);
+            //Thực hiện câu lệnh SQL
+            try
+            {
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+                return 0;
+            }
+
+            //Giải phóng bộ nhớ
+            cmd.Dispose();
+            cmd = null;
+            return 1;
         }
     }
 }

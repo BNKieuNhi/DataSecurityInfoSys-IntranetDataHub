@@ -139,6 +139,78 @@
     </Compile>
     <Compile Include="Functions\CustomParameter.cs" />
     <Compile Include="Functions\Database.cs" />
+    <Compile Include="GiangVien\fKQHocPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiangVien\fKQHocPhan.Designer.cs">
+      <DependentUpon>fKQHocPhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiangVien\fMain_GV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiangVien\fMain_GV.Designer.cs">
+      <DependentUpon>fMain_GV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiangVien\fPhanCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiangVien\fPhanCong.Designer.cs">
+      <DependentUpon>fPhanCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVu\fTTSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVu\fTTSinhVien.Designer.cs">
+      <DependentUpon>fTTSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVu\fMain_GVU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVu\fMain_GVU.Designer.cs">
+      <DependentUpon>fMain_GVU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVu\fSinhVien_GVU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVu\fSinhVien_GVU.Designer.cs">
+      <DependentUpon>fSinhVien_GVU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVCoBan\fDonVi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVCoBan\fDonVi.Designer.cs">
+      <DependentUpon>fDonVi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVCoBan\fHocPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVCoBan\fHocPhan.Designer.cs">
+      <DependentUpon>fHocPhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVCoBan\fKeHoach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVCoBan\fKeHoach.Designer.cs">
+      <DependentUpon>fKeHoach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVCoBan\fMain_NV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVCoBan\fMain_NV.Designer.cs">
+      <DependentUpon>fMain_NV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVCoBan\fSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVCoBan\fSinhVien.Designer.cs">
+      <DependentUpon>fSinhVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NVCoBan\fTTCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NVCoBan\fTTCaNhan.Designer.cs">
+      <DependentUpon>fTTCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Admin\fAddRole.resx">
@@ -167,6 +239,42 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiangVien\fKQHocPhan.resx">
+      <DependentUpon>fKQHocPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiangVien\fMain_GV.resx">
+      <DependentUpon>fMain_GV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiangVien\fPhanCong.resx">
+      <DependentUpon>fPhanCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoVu\fTTSinhVien.resx">
+      <DependentUpon>fTTSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoVu\fMain_GVU.resx">
+      <DependentUpon>fMain_GVU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoVu\fSinhVien_GVU.resx">
+      <DependentUpon>fSinhVien_GVU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVCoBan\fDonVi.resx">
+      <DependentUpon>fDonVi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVCoBan\fHocPhan.resx">
+      <DependentUpon>fHocPhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVCoBan\fKeHoach.resx">
+      <DependentUpon>fKeHoach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVCoBan\fMain_NV.resx">
+      <DependentUpon>fMain_NV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVCoBan\fSinhVien.resx">
+      <DependentUpon>fSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NVCoBan\fTTCaNhan.resx">
+      <DependentUpon>fTTCaNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -198,9 +306,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GiangVien\" />
-    <Folder Include="GiaoVu\" />
-    <Folder Include="NVCoBan\" />
     <Folder Include="SinhVien\" />
     <Folder Include="TruongDonVi\" />
     <Folder Include="TruongKhoa\" />

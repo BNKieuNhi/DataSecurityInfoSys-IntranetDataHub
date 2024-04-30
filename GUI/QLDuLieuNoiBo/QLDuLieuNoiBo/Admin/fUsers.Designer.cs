@@ -56,10 +56,7 @@
             this.radBtnLock = new System.Windows.Forms.RadioButton();
             this.radBtnUnlock = new System.Windows.Forms.RadioButton();
             this.radBtnCascade = new System.Windows.Forms.RadioButton();
-<<<<<<< HEAD:GUI/QLDuLieuNoiBo/QLDuLieuNoiBo/Admin/fUsers.Designer.cs
             this.lblAction = new System.Windows.Forms.Label();
-=======
->>>>>>> d2bd337147d6ab70f410a77f21fa8087d80b61e7:GUI/QLDuLieuNoiBo/QLDuLieuNoiBo/fUsers.Designer.cs
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ListUsers)).BeginInit();
             this.SuspendLayout();
@@ -349,7 +346,6 @@
             this.radBtnCascade.Text = "CASCADE";
             this.radBtnCascade.UseVisualStyleBackColor = true;
             // 
-<<<<<<< HEAD:GUI/QLDuLieuNoiBo/QLDuLieuNoiBo/Admin/fUsers.Designer.cs
             // lblAction
             // 
             this.lblAction.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -363,8 +359,6 @@
             this.lblAction.Text = "Action:";
             this.lblAction.Visible = false;
             // 
-=======
->>>>>>> d2bd337147d6ab70f410a77f21fa8087d80b61e7:GUI/QLDuLieuNoiBo/QLDuLieuNoiBo/fUsers.Designer.cs
             // fUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);

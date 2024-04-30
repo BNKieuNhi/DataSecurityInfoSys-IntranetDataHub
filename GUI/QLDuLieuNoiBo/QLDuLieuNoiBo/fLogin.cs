@@ -1,5 +1,7 @@
 ﻿/*using QLDuLieuNoiBo.Admin;
 using QLDuLieuNoiBo.TruongKhoa;*/
+using QLDuLieuNoiBo.NVCoBan;
+using QLDuLieuNoiBo.GiangVien;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using QLDuLieuNoiBo.GiaoVu;
 
 namespace QLDuLieuNoiBo
 {
@@ -71,7 +74,7 @@ namespace QLDuLieuNoiBo
             }
             else if (taikhoan.StartsWith("GV_"))
             {
-                loaitk = "giaovien";
+                loaitk = "giangvien";
             }
             else if (taikhoan.StartsWith("GVU_"))
             {
@@ -96,28 +99,29 @@ namespace QLDuLieuNoiBo
                     fMain _fMain = new fMain();
                     _fMain.Show();
                     break;
-/*                case "truongkhoa":
-                    TruongKhoa.fMain _fMain = new fMain();
-                    _fMain.Show();
+                case "nhanviencoban":
+                    NVCoBan.fMain_NV _fMain_NV = new fMain_NV(taikhoan);
+                    _fMain_NV.Show();
                     break;
-                case "truongdonvi":
-                    TruongDonVi.fMain _fMain = new fMain();
-                    _fMain.Show();
-                    break;
-                case "giaovien":
-                    GiaoVien.fMain _fMain = new fMain();
-                    _fMain.Show();
+                case "giangvien":
+                    GiangVien.fMain_GV _fMain_GV = new fMain_GV(taikhoan);
+                    _fMain_GV.Show();
                     break;
                 case "giaovu":
-                    GiaoVu.fMain _fMain = new fMain();
-                    _fMain.Show();
+                    GiaoVu.fMain_GVU _fMain_GVU = new fMain_GVU(taikhoan);
+                    _fMain_GVU.Show();
                     break;
-                case "nhanviencoban":
-                    NVCoBan.fMain _fMain = new fMain();
-                    _fMain.Show();
+
+/*              case "truongkhoa":
+                    fMain_TK _fMain_TK = new fMain_TK(username);
+                    _fMain_TK.Show();
                     break;
-                case "sinhvien":
-                    SinhVien.fMain _fMain = new fMain();
+                case "truongdonvi":
+                    TruongDonVi.fMain _fMain = new fMain(username);
+                    _fMain.Show();
+                    break;*/
+/*                case "sinhvien":
+                    SinhVien.fMain _fMain = new fMain(username);
                     _fMain.Show();
                     break;*/
             }
