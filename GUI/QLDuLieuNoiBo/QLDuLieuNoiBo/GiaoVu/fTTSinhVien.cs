@@ -17,13 +17,32 @@ namespace QLDuLieuNoiBo.GiangVien
         private string masv = "";
         public static string State = "-1";
         DataTable dtable;
+        string[] mact_daotao = new string[] { "CQ", "CTTT", "CLC","VP" };
+        string[] manganh = new string[] { "CNTT" };
+        string[] phai = new string[] { "Nam","Nu" };
+
         public fTTSinhVien(string masv)
         {
             this.masv = masv;
             InitializeComponent();
             fTTSinhVien_Load(null, null);
+            LoadComboBox();
         }
-
+        private void LoadComboBox()
+        {
+            foreach (string col in manganh)
+            {
+                cbBoxNganh.Items.Add(col);
+            }
+            foreach (string col in mact_daotao)
+            {
+                cbBoxChuongTrinh.Items.Add(col);
+            }
+            foreach (string col in phai)
+            {
+                cbBoxPhai.Items.Add(col);
+            }
+        }
         private void fTTSinhVien_Load(object sender, EventArgs e)
         {
             // nếu không có masv => thêm mới sinh viên
@@ -50,7 +69,7 @@ namespace QLDuLieuNoiBo.GiangVien
                     // Set các giá trị vào component của form
                     txtHoTen.Text = dtable.Rows[0]["HOTEN"].ToString();
                     /*mtbNgaySinh.Text = dtable.Rows[0]["NGSINH"].ToString();*/
-                    txtNgaySinh.Text = dtable.Rows[0]["NGSINH"].ToString();
+                    txtNgaySinh.Text = Database.ChuyenDoiNgaySinh(dtable.Rows[0]["NGSINH"].ToString());
                     cbBoxPhai.Text = dtable.Rows[0]["PHAI"].ToString();
                     txtSdt.Text = dtable.Rows[0]["DT"].ToString();
                     txtDiaChi.Text = dtable.Rows[0]["DCHI"].ToString();
@@ -62,20 +81,13 @@ namespace QLDuLieuNoiBo.GiangVien
 
                 }
             }
-            /*
-            DataTable all_HinhThuDT = new Database().SelectData("GetTenHinhThucDangTuyen", null);
-            foreach (DataRow row in all_HinhThuDT.Rows)
-            {
-                cbbMaHT.Items.Add(row["TenHinhThuc"].ToString());
-            }
-            }*/
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
             string sql = "";
             string hoTen = txtHoTen.Text;
-            string ngaySinh = txtNgaySinh.Text;
+            string ngaySinh = Database.ChuyenDoiNgaySinh(txtNgaySinh.Text);
             string mtb_ngaySinh = mtbNgaySinh.Text;
             string phai = cbBoxPhai.Text;
             string sdt = txtSdt.Text;
@@ -110,7 +122,6 @@ namespace QLDuLieuNoiBo.GiangVien
                 MessageBox.Show("Error: Thực thi thất bại!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnHuy_Click(object sender, EventArgs e)
         {
             this.Close();

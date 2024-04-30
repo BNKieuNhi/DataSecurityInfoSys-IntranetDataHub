@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvDSDonVi = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSDonVi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,32 +42,47 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDSDonVi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDSDonVi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDSDonVi.Location = new System.Drawing.Point(3, 26);
+            this.dgvDSDonVi.Location = new System.Drawing.Point(3, 87);
             this.dgvDSDonVi.MultiSelect = false;
             this.dgvDSDonVi.Name = "dgvDSDonVi";
             this.dgvDSDonVi.ReadOnly = true;
             this.dgvDSDonVi.RowHeadersWidth = 51;
             this.dgvDSDonVi.RowTemplate.Height = 24;
             this.dgvDSDonVi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDSDonVi.Size = new System.Drawing.Size(908, 344);
+            this.dgvDSDonVi.Size = new System.Drawing.Size(906, 344);
             this.dgvDSDonVi.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.Location = new System.Drawing.Point(296, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(303, 31);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "KẾ HOẠCH MỞ HỌC PHẦN";
             // 
             // fKeHoach
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 396);
+            this.ClientSize = new System.Drawing.Size(912, 457);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvDSDonVi);
             this.Name = "fKeHoach";
             this.Text = "fKeHoach";
             this.Load += new System.EventHandler(this.fKeHoach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDSDonVi)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dgvDSDonVi;
+        private System.Windows.Forms.Label label2;
     }
 }

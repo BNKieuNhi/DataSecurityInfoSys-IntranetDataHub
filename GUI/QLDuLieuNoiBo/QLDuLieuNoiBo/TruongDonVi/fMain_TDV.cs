@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QLDuLieuNoiBo.GiangVien;
+using QLDuLieuNoiBo.NVCoBan;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,30 +9,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
-namespace QLDuLieuNoiBo.NVCoBan
+namespace QLDuLieuNoiBo.TruongDonVi
 {
-    public partial class fMain_NV : Form
+    public partial class fMain_TDV : Form
     {
         public string username = "";
-        public fMain_NV(string username)
+        public fMain_TDV(string username)
         {
             this.username = username;
             InitializeComponent();
         }
 
-        private void thoatToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            fLogin _fLogin = new fLogin();
-            _fLogin.Show();
-        }
-
-        private void fMain_Load(object sender, EventArgs e)
+        private void fMain_TDV_Load(object sender, EventArgs e)
         {
             lblUsername.Text = username;
-            /*fWelcome _fWelcome = new fWelcome();
-            AddForm(_fWelcome);*/
         }
         private void AddForm(Form f)
         {
@@ -49,6 +43,19 @@ namespace QLDuLieuNoiBo.NVCoBan
             AddForm(_fTTCaNhan);
         }
 
+        private void ThongBaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThongBao _fThongBao = new fThongBao();
+            AddForm(_fThongBao);
+        }
+
+        private void thoatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fLogin _fLogin = new fLogin();
+            _fLogin.Show();
+        }
+
         private void SinhVienToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fSinhVien _fSinhVien = new fSinhVien();
@@ -63,8 +70,8 @@ namespace QLDuLieuNoiBo.NVCoBan
 
         private void HocPhanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fHocPhan _fHocPhan = new fHocPhan();
-            AddForm(_fHocPhan);
+            fHocPhan_TDV _fHocPhan_TDV = new fHocPhan_TDV();
+            AddForm(_fHocPhan_TDV);
         }
 
         private void KeHoachToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,10 +80,22 @@ namespace QLDuLieuNoiBo.NVCoBan
             AddForm(_fKeHoach);
         }
 
-        private void ThongBaoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void theoCaNhanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fThongBao _fThongBao = new fThongBao();
-            AddForm(_fThongBao);
+            fPhanCong _fPhanCong = new fPhanCong();
+            AddForm(_fPhanCong);
+        }
+
+        private void theoDonViToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fPhanCongTheoDV _fPhanCongTheoDV = new fPhanCongTheoDV();
+            AddForm(_fPhanCongTheoDV);
+        }
+
+        private void KQHPToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fKQHocPhan _fKQHocPhan = new fKQHocPhan();
+            AddForm(_fKQHocPhan);
         }
     }
 }

@@ -1,6 +1,6 @@
-﻿namespace QLDuLieuNoiBo.GiaoVu
+﻿namespace QLDuLieuNoiBo.TruongDonVi
 {
-    partial class fMain_GVU
+    partial class fMain_TDV
     {
         /// <summary>
         /// Required designer variable.
@@ -41,9 +41,11 @@
             this.HocPhanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KeHoachToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.PhanCongToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.theoCaNhanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.KQHPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.theoDonViToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -54,16 +56,16 @@
             this.panel2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel2.Controls.Add(this.lblUsername);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(814, 3);
+            this.panel2.Location = new System.Drawing.Point(814, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(155, 27);
-            this.panel2.TabIndex = 11;
+            this.panel2.Size = new System.Drawing.Size(155, 29);
+            this.panel2.TabIndex = 14;
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(45, 2);
+            this.lblUsername.Location = new System.Drawing.Point(40, 3);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(79, 22);
             this.lblUsername.TabIndex = 2;
@@ -77,7 +79,7 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.hệThốngToolStripMenuItem,
             this.quảnLýToolStripMenuItem});
-            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Location = new System.Drawing.Point(0, 2);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(325, 28);
             this.menuStrip.TabIndex = 3;
@@ -89,7 +91,7 @@
             this.ThongBaoToolStripMenuItem,
             this.thoatToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(88, 26);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
             // ThongBaoToolStripMenuItem
@@ -157,10 +159,19 @@
             // 
             // PhanCongToolStripMenuItem
             // 
+            this.PhanCongToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.theoCaNhanToolStripMenuItem,
+            this.theoDonViToolStripMenuItem});
             this.PhanCongToolStripMenuItem.Name = "PhanCongToolStripMenuItem";
             this.PhanCongToolStripMenuItem.Size = new System.Drawing.Size(248, 26);
             this.PhanCongToolStripMenuItem.Text = "Phân công giảng dạy";
-            this.PhanCongToolStripMenuItem.Click += new System.EventHandler(this.PhanCongToolStripMenuItem_Click);
+            // 
+            // theoCaNhanToolStripMenuItem
+            // 
+            this.theoCaNhanToolStripMenuItem.Name = "theoCaNhanToolStripMenuItem";
+            this.theoCaNhanToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.theoCaNhanToolStripMenuItem.Text = "Cá nhân";
+            this.theoCaNhanToolStripMenuItem.Click += new System.EventHandler(this.theoCaNhanToolStripMenuItem_Click);
             // 
             // KQHPToolStripMenuItem
             // 
@@ -176,17 +187,24 @@
             this.pnlContent.Location = new System.Drawing.Point(0, 36);
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(972, 517);
-            this.pnlContent.TabIndex = 12;
+            this.pnlContent.TabIndex = 15;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.menuStrip);
-            this.panel1.Location = new System.Drawing.Point(0, 3);
+            this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(810, 27);
-            this.panel1.TabIndex = 10;
+            this.panel1.Size = new System.Drawing.Size(810, 29);
+            this.panel1.TabIndex = 13;
             // 
-            // fMain_GVU
+            // theoDonViToolStripMenuItem
+            // 
+            this.theoDonViToolStripMenuItem.Name = "theoDonViToolStripMenuItem";
+            this.theoDonViToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.theoDonViToolStripMenuItem.Text = "Đơn vị";
+            this.theoDonViToolStripMenuItem.Click += new System.EventHandler(this.theoDonViToolStripMenuItem_Click);
+            // 
+            // fMain_TDV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,10 +212,10 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.panel1);
-            this.Name = "fMain_GVU";
+            this.Name = "fMain_TDV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Giáo vụ";
-            this.Load += new System.EventHandler(this.fMain_GVU_Load);
+            this.Text = "fMain_TDV";
+            this.Load += new System.EventHandler(this.fMain_TDV_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.menuStrip.ResumeLayout(false);
@@ -214,6 +232,7 @@
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem hệThốngToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ThongBaoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thoatToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quảnLýToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem TTCaNhanToolStripMenuItem;
@@ -221,10 +240,11 @@
         private System.Windows.Forms.ToolStripMenuItem DonViToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem HocPhanToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem KeHoachToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem PhanCongToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem theoCaNhanToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem KQHPToolStripMenuItem;
         private System.Windows.Forms.Panel pnlContent;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ToolStripMenuItem PhanCongToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem KQHPToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ThongBaoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem theoDonViToolStripMenuItem;
     }
 }

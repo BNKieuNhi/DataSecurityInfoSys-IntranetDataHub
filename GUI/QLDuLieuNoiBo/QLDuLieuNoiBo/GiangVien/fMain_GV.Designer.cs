@@ -32,6 +32,7 @@
             this.lblUsername = new System.Windows.Forms.Label();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.hệThốngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ThongBaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thoatToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TTCaNhanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +44,6 @@
             this.KQHPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ThongBaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -67,7 +67,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(49, 5);
+            this.lblUsername.Location = new System.Drawing.Point(49, 4);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(79, 22);
             this.lblUsername.TabIndex = 2;
@@ -96,10 +96,17 @@
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
+            // ThongBaoToolStripMenuItem
+            // 
+            this.ThongBaoToolStripMenuItem.Name = "ThongBaoToolStripMenuItem";
+            this.ThongBaoToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
+            this.ThongBaoToolStripMenuItem.Text = "Thông báo";
+            this.ThongBaoToolStripMenuItem.Click += new System.EventHandler(this.ThongBaoToolStripMenuItem_Click);
+            // 
             // thoatToolStripMenuItem
             // 
             this.thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
-            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(169, 26);
             this.thoatToolStripMenuItem.Text = "Thoát";
             this.thoatToolStripMenuItem.Click += new System.EventHandler(this.thoatToolStripMenuItem_Click_1);
             // 
@@ -184,13 +191,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(810, 27);
             this.panel1.TabIndex = 7;
-            // 
-            // ThongBaoToolStripMenuItem
-            // 
-            this.ThongBaoToolStripMenuItem.Name = "ThongBaoToolStripMenuItem";
-            this.ThongBaoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.ThongBaoToolStripMenuItem.Text = "Thông báo";
-            this.ThongBaoToolStripMenuItem.Click += new System.EventHandler(this.ThongBaoToolStripMenuItem_Click);
             // 
             // fMain_GV
             // 

@@ -14,20 +14,34 @@ namespace QLDuLieuNoiBo.GiaoVu
     public partial class fSinhVien_GVU : Form
     {
         DataTable dtable;
+        private string keyword = "";
         public fSinhVien_GVU()
         {
             InitializeComponent();
         }
-        private void LoadSinhVien()
+        private void LoadSinhVien(string keyword)
         {
-            string sql = "select * from U_ADMIN.SINHVIEN";
-            dtable = Database.GetDataToTable(sql);
+            keyword = txtKeyword.Text;
+            string sql = "SELECT * FROM U_ADMIN.SINHVIEN";
 
+            // Nếu keyword không rỗng, thêm điều kiện tìm kiếm vào câu SQL
+            if (!string.IsNullOrEmpty(keyword))
+            {
+                List<string> columnsToSearch = new List<string>
+                {
+                    "MASV", "HOTEN", "PHAI", "NGSINH", "DCHI", "DT", "MACT", "MANGANH", "SOTCTL", "DTBTL"
+                };
+
+                string condition = string.Join(" OR ", columnsToSearch.Select(col => $"{col} LIKE '%{keyword}%'"));
+                sql += $" WHERE {condition}";
+            }
+            dtable = Database.GetDataToTable(sql);
             dgvDSSinhVien.DataSource = dtable;
         }
+
         private void fSinhVien_GVU_Load(object sender, EventArgs e)
         {
-            LoadSinhVien();
+            LoadSinhVien(null);
         }
 
         private void dgvDSSinhVien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -44,14 +58,20 @@ namespace QLDuLieuNoiBo.GiaoVu
 
                 // Sau khi fPhieuDKQC được đóng lại
                 // Load lại ds phiếu đk quảng cáo
-                LoadSinhVien();
+                LoadSinhVien(keyword);
             }
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
             new fTTSinhVien(null).ShowDialog();
-            LoadSinhVien();
+            LoadSinhVien(null);
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            keyword = txtKeyword.Text;
+            LoadSinhVien(keyword);
         }
     }
 }

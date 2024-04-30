@@ -48,7 +48,6 @@
             this.lblPassword = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.txtUId = new System.Windows.Forms.TextBox();
             this.lblIDUser = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
@@ -57,6 +56,7 @@
             this.radBtnUnlock = new System.Windows.Forms.RadioButton();
             this.radBtnCascade = new System.Windows.Forms.RadioButton();
             this.lblAction = new System.Windows.Forms.Label();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_ListUsers)).BeginInit();
             this.SuspendLayout();
@@ -252,19 +252,6 @@
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
-            // btnDelete
-            // 
-            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnDelete.BackColor = System.Drawing.Color.LightPink;
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(349, 521);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(98, 33);
-            this.btnDelete.TabIndex = 13;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
             // txtUId
             // 
             this.txtUId.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -359,6 +346,19 @@
             this.lblAction.Text = "Action:";
             this.lblAction.Visible = false;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnDelete.BackColor = System.Drawing.Color.LightPink;
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(349, 521);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(98, 33);
+            this.btnDelete.TabIndex = 13;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // fUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -416,7 +416,6 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.TextBox txtUId;
         private System.Windows.Forms.Label lblIDUser;
         private System.Windows.Forms.Button btnCancel;
@@ -426,5 +425,6 @@
         private System.Windows.Forms.RadioButton radBtnCascade;
         private System.Windows.Forms.ToolStripMenuItem colPrivilegesToolStripMenuItem;
         private System.Windows.Forms.Label lblAction;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

@@ -40,7 +40,7 @@ namespace QLDuLieuNoiBo
             }
 
             string[] cols = new string[] { "NHANVIENCOBAN", "TRUONGKHOA", "TRUONGDONVI",
-                "GIAOVU", "GIANGVIEN","SINHVIEN"};
+                "GIAOVU", "GIANGVIEN","SINHVIEN","THONGBAO"};
 
             foreach (string col in cols)
             {

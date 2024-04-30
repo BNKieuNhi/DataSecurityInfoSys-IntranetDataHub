@@ -55,30 +55,37 @@ namespace QLDuLieuNoiBo.GiaoVu
 
         private void DonViToolStripMenuItem_Click(object sender, EventArgs e)
         {
-/*            fDonVi_GVU _fDonVi_GVU = new fDonVi_GVU();
-            AddForm(_fDonVi_GVU);*/
+            fDonVi_GVU _fDonVi_GVU = new fDonVi_GVU();
+            AddForm(_fDonVi_GVU);
         }
 
         private void HocPhanToolStripMenuItem_Click(object sender, EventArgs e)
         {
-/*            fHocPhan_GVU _fHocPhan_GVU = new fHocPhan_GVU();
-            AddForm(_fHocPhan_GVU);*/
+            fHocPhan_GVU _fHocPhan_GVU = new fHocPhan_GVU();
+            AddForm(_fHocPhan_GVU);
         }
 
         private void KeHoachToolStripMenuItem_Click(object sender, EventArgs e)
         {
-/*            fKeHoach_GVU _fKeHoach_GVU = new fKeHoach_GVU();
-            AddForm(_fKeHoach_GVU);*/
+            fKeHoach_GVU _fKeHoach_GVU = new fKeHoach_GVU();
+            AddForm(_fKeHoach_GVU);
         }
 
         private void PhanCongToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fPhanCong_GVU _fPhanCong_GVU = new fPhanCong_GVU();
+            AddForm(_fPhanCong_GVU);
         }
 
         private void KQHPToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ThongBaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThongBao _fThongBao = new fThongBao();
+            AddForm(_fThongBao);
         }
     }
 }
