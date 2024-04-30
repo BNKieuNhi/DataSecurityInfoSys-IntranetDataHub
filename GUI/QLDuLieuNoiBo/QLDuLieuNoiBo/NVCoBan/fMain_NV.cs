@@ -70,5 +70,11 @@ namespace QLDuLieuNoiBo.NVCoBan
             fKeHoach _fKeHoach = new fKeHoach();
             AddForm(_fKeHoach);
         }
+
+        private void ThongBaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThongBao _fThongBao = new fThongBao();
+            AddForm(_fThongBao);
+        }
     }
 }

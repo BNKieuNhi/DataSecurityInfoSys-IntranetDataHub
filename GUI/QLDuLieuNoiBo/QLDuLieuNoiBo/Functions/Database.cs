@@ -20,18 +20,18 @@ namespace QLDuLieuNoiBo
         public static OracleConnection conn;
         public static DataTable dtable;
         public static OracleCommand cmd;
-/*        public Database()
-        {
-            try
-            {
-                conn = new OracleConnection(strCon);
-                conn.Open();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Connected failed: " + ex.Message);
-            }
-        }*/
+        /*        public Database()
+                {
+                    try
+                    {
+                        conn = new OracleConnection(strCon);
+                        conn.Open();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Connected failed: " + ex.Message);
+                    }
+                }*/
         public static void InitConnection(String username, String password)
         {
             String strCon = @"Data Source=" + host_name + ";User ID=" + username + ";Password=" + password + "";
@@ -88,7 +88,7 @@ namespace QLDuLieuNoiBo
                 using (cmd = new OracleCommand(sql, conn))
                 {
                     cmd.CommandType = CommandType.Text;
-                    
+
                     using (var reader = cmd.ExecuteReader())
                     {
                         if (reader.HasRows)
@@ -199,6 +199,18 @@ namespace QLDuLieuNoiBo
             cmd.Dispose();
             cmd = null;
             return 1;
+        }
+        public static string ChuyenDoiNgaySinh(string ngaySinh)
+        {
+            DateTime dateTime;
+            if (DateTime.TryParse(ngaySinh, out dateTime))
+            {
+                return dateTime.ToString("dd-MM-yyyy");
+            }
+            else
+            {
+                return "Ngày sinh không hợp lệ";
+            }
         }
     }
 }

@@ -24,7 +24,7 @@ namespace QLDuLieuNoiBo.NVCoBan
             if (dtable.Rows.Count > 0)
             {
                 txtHoTen.Text = dtable.Rows[0]["HOTEN"].ToString();
-                txtNgaySinh.Text = dtable.Rows[0]["NGSINH"].ToString();
+                txtNgaySinh.Text = Database.ChuyenDoiNgaySinh(dtable.Rows[0]["NGSINH"].ToString());
                 txtPhai.Text = dtable.Rows[0]["PHAI"].ToString();
                 txtPhuCap.Text = dtable.Rows[0]["PHUCAP"].ToString();
                 txtDonVi.Text = dtable.Rows[0]["MADV"].ToString();

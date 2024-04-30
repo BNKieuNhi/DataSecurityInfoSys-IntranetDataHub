@@ -43,6 +43,7 @@
             this.KQHPToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ThongBaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -82,22 +83,23 @@
             this.quảnLýToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(175, 27);
+            this.menuStrip.Size = new System.Drawing.Size(325, 28);
             this.menuStrip.TabIndex = 3;
             this.menuStrip.Text = "menuStrip1";
             // 
             // hệThốngToolStripMenuItem
             // 
             this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ThongBaoToolStripMenuItem,
             this.thoatToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(88, 23);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
             // thoatToolStripMenuItem
             // 
             this.thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
-            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
+            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.thoatToolStripMenuItem.Text = "Thoát";
             this.thoatToolStripMenuItem.Click += new System.EventHandler(this.thoatToolStripMenuItem_Click_1);
             // 
@@ -112,7 +114,7 @@
             this.PhanCongToolStripMenuItem,
             this.KQHPToolStripMenuItem});
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
-            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(79, 23);
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
             // 
             // TTCaNhanToolStripMenuItem
@@ -183,6 +185,13 @@
             this.panel1.Size = new System.Drawing.Size(810, 27);
             this.panel1.TabIndex = 7;
             // 
+            // ThongBaoToolStripMenuItem
+            // 
+            this.ThongBaoToolStripMenuItem.Name = "ThongBaoToolStripMenuItem";
+            this.ThongBaoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ThongBaoToolStripMenuItem.Text = "Thông báo";
+            this.ThongBaoToolStripMenuItem.Click += new System.EventHandler(this.ThongBaoToolStripMenuItem_Click);
+            // 
             // fMain_GV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -222,5 +231,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ToolStripMenuItem PhanCongToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem KQHPToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ThongBaoToolStripMenuItem;
     }
 }

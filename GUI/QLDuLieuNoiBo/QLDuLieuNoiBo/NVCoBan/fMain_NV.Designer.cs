@@ -41,6 +41,7 @@
             this.KeHoachToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlContent = new System.Windows.Forms.Panel();
+            this.ThongBaoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2.SuspendLayout();
             this.menuStrip.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -83,6 +84,7 @@
             // hệThốngToolStripMenuItem
             // 
             this.hệThốngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ThongBaoToolStripMenuItem,
             this.thoatToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
             this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
@@ -91,7 +93,7 @@
             // thoatToolStripMenuItem
             // 
             this.thoatToolStripMenuItem.Name = "thoatToolStripMenuItem";
-            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(132, 26);
+            this.thoatToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.thoatToolStripMenuItem.Text = "Thoát";
             this.thoatToolStripMenuItem.Click += new System.EventHandler(this.thoatToolStripMenuItem_Click);
             // 
@@ -159,6 +161,13 @@
             this.pnlContent.Size = new System.Drawing.Size(972, 517);
             this.pnlContent.TabIndex = 6;
             // 
+            // ThongBaoToolStripMenuItem
+            // 
+            this.ThongBaoToolStripMenuItem.Name = "ThongBaoToolStripMenuItem";
+            this.ThongBaoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ThongBaoToolStripMenuItem.Text = "Thông báo";
+            this.ThongBaoToolStripMenuItem.Click += new System.EventHandler(this.ThongBaoToolStripMenuItem_Click);
+            // 
             // fMain_NV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -196,5 +205,6 @@
         private System.Windows.Forms.ToolStripMenuItem KeHoachToolStripMenuItem;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnlContent;
+        private System.Windows.Forms.ToolStripMenuItem ThongBaoToolStripMenuItem;
     }
 }

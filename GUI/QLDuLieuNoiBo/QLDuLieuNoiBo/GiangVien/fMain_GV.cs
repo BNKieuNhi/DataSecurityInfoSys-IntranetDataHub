@@ -81,5 +81,11 @@ namespace QLDuLieuNoiBo.GiangVien
             fKQHocPhan _fKQHocPhan = new fKQHocPhan();
             AddForm(_fKQHocPhan);
         }
+
+        private void ThongBaoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fThongBao _fThongBao = new fThongBao();
+            AddForm(_fThongBao);
+        }
     }
 }
