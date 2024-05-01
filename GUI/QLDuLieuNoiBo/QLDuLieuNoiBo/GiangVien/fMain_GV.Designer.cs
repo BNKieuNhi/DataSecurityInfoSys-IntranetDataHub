@@ -83,7 +83,7 @@
             this.quảnLýToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(325, 28);
+            this.menuStrip.Size = new System.Drawing.Size(175, 27);
             this.menuStrip.TabIndex = 3;
             this.menuStrip.Text = "menuStrip1";
             // 
@@ -93,7 +93,7 @@
             this.ThongBaoToolStripMenuItem,
             this.thoatToolStripMenuItem});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(88, 23);
             this.hệThốngToolStripMenuItem.Text = "Hệ thống";
             // 
             // ThongBaoToolStripMenuItem
@@ -121,7 +121,7 @@
             this.PhanCongToolStripMenuItem,
             this.KQHPToolStripMenuItem});
             this.quảnLýToolStripMenuItem.Name = "quảnLýToolStripMenuItem";
-            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.quảnLýToolStripMenuItem.Size = new System.Drawing.Size(79, 23);
             this.quảnLýToolStripMenuItem.Text = "Quản lý";
             // 
             // TTCaNhanToolStripMenuItem
@@ -202,7 +202,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "fMain_GV";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fMain_GV";
+            this.Text = "Giảng viên";
             this.Load += new System.EventHandler(this.fMain_GV_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

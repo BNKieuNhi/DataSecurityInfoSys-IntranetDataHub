@@ -67,7 +67,7 @@ namespace QLDuLieuNoiBo.TruongKhoa
         private void btnThem_Click(object sender, EventArgs e)
         {
             new fTTinNhanSu(null).ShowDialog();
-
+            LoadNhanSu(null);
             btnSearch_Click(null, null);
         }
 
