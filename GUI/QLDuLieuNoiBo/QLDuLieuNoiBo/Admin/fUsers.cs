@@ -289,9 +289,18 @@ namespace QLDuLieuNoiBo
                         txtUName.Text = "";
                         txtPassword.Text = "";
                     }
-/*                    OracleCommand setFalse = con.CreateCommand();
-                    setFalse.CommandText = "ALTER SESSION SET \"_ORACLE_SCRIPT\" = FALSE";
-                    setFalse.ExecuteNonQuery();*/
+                    insertCRUD.ExecuteNonQuery();
+                    
+                    insertCRUD.CommandText = "GRANT CONNECT TO " + username;
+                    Console.WriteLine(insertCRUD.CommandText);
+                    insertCRUD.ExecuteNonQuery();
+
+                    insertCRUD.CommandText = "GRANT CREATE SESSION TO " + username;
+                    Console.WriteLine(insertCRUD.CommandText);
+                    insertCRUD.ExecuteNonQuery();
+                    /*                    OracleCommand setFalse = con.CreateCommand();
+                                        setFalse.CommandText = "ALTER SESSION SET \"_ORACLE_SCRIPT\" = FALSE";
+                                        setFalse.ExecuteNonQuery();*/
 
                     lblAction.Visible = false;
                     btnAdd.Enabled = true;
@@ -302,7 +311,7 @@ namespace QLDuLieuNoiBo
                 catch (Exception ex)
                 {
                     // Xử lý các ngoại lệ nếu có
-                    MessageBox.Show("Lỗi: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    // MessageBox.Show("Lỗi: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
