@@ -1,4 +1,4 @@
--- Chạy với quyền SYS
+-- ====== Chạy với quyền SYS ======
 ALTER SESSION SET CONTAINER = PDBQLDLNB;
 SHOW CON_NAME;
 /
@@ -50,7 +50,7 @@ BEGIN
   FOR user_rec IN (
     SELECT USERNAME
     FROM U_ADMIN.NHANSU
-    WHERE VAITRO = 'NHÂN VIÊN CƠ BẢN'
+    WHERE VAITRO = 'NHAN VIEN CO BAN'
     AND ROWNUM <= NUM -- Limit to 10 users
   ) LOOP
     -- Generate SQL statements dynamically to create users and grant role
@@ -80,7 +80,7 @@ BEGIN
   FOR user_rec IN (
     SELECT USERNAME
     FROM U_ADMIN.NHANSU
-    WHERE VAITRO = 'GIẢNG VIÊN'
+    WHERE VAITRO = 'GIANG VIEN'
     AND ROWNUM <= NUM 
   ) LOOP
     -- Generate SQL statements dynamically to create users and grant role
@@ -109,7 +109,7 @@ BEGIN
   FOR user_rec IN (
     SELECT USERNAME
     FROM U_ADMIN.NHANSU
-    WHERE VAITRO = 'GIÁO VỤ'
+    WHERE VAITRO = 'GIAO VU'
     AND ROWNUM <= NUM
   ) LOOP
     -- Generate SQL statements dynamically to create users and grant role
@@ -138,7 +138,7 @@ BEGIN
   FOR user_rec IN (
     SELECT USERNAME
     FROM U_ADMIN.NHANSU
-    WHERE VAITRO = 'TRƯỞNG ĐƠN VỊ'
+    WHERE VAITRO = 'TRUONG DON VI'
     AND ROWNUM <= NUM -- Limit to 10 users
   ) LOOP
     -- Generate SQL statements dynamically to create users and grant role
@@ -167,7 +167,7 @@ BEGIN
   FOR user_rec IN (
     SELECT USERNAME
     FROM U_ADMIN.NHANSU
-    WHERE VAITRO = 'TRƯỞNG KHOA'
+    WHERE VAITRO = 'TRUONG KHOA'
     AND ROWNUM <= NUM
   ) LOOP
     -- Generate SQL statements dynamically to create users and grant role
@@ -216,7 +216,7 @@ BEGIN
 END;
 /
 
-EXEC CREATE_USERS_AND_ASSIGN_ROLE_SV(30); 
+EXEC CREATE_USERS_AND_ASSIGN_ROLE_SV(10); 
 /
 
 SELECT username
