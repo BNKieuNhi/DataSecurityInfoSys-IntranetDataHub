@@ -2,41 +2,49 @@
 -----------------------------------------
 DELETE FROM DONVI;
 ALTER TABLE DONVI MODIFY (MADV GENERATED ALWAYS AS IDENTITY (START WITH 1));
-INSERT INTO DONVI (TENDV) VALUES ('Văn phòng khoa');
-INSERT INTO DONVI (TENDV) VALUES ('Bộ môn HTTT');
-INSERT INTO DONVI (TENDV) VALUES ('Bộ môn CNPM');
-INSERT INTO DONVI (TENDV) VALUES ('Bộ môn KHMT');
-INSERT INTO DONVI (TENDV) VALUES ('Bộ môn CNTT');
-INSERT INTO DONVI (TENDV) VALUES ('Bộ môn TGMT');
-INSERT INTO DONVI (TENDV) VALUES ('Bộ môn MMT và Viễn thông');
+INSERT INTO DONVI (TENDV) VALUES ('Van phong khoa');
+INSERT INTO DONVI (TENDV) VALUES ('Bo mon HTTT');
+INSERT INTO DONVI (TENDV) VALUES ('Bo mon CNPM');
+INSERT INTO DONVI (TENDV) VALUES ('Bo mon KHMT');
+INSERT INTO DONVI (TENDV) VALUES ('Bo mon CNTT');
+INSERT INTO DONVI (TENDV) VALUES ('Bo mon TGMT');
+INSERT INTO DONVI (TENDV) VALUES ('Bo mon MMT va Vien thong');
+/
+UPDATE DONVI SET TENDV = 'Van phong khoa' WHERE TENDV = 'Văn phòng khoa';
+UPDATE DONVI SET TENDV = 'Bo mon HTTT' WHERE TENDV = 'Bộ môn HTTT';
+UPDATE DONVI SET TENDV = 'Bo mon CNPM' WHERE TENDV = 'Bộ môn CNPM';
+UPDATE DONVI SET TENDV = 'Bo mon KHMT' WHERE TENDV = 'Bộ môn KHMT';
+UPDATE DONVI SET TENDV = 'Bo mon CNTT' WHERE TENDV = 'Bộ môn CNTT';
+UPDATE DONVI SET TENDV = 'Bo mon TGMT' WHERE TENDV = 'Bộ môn TGMT';
+UPDATE DONVI SET TENDV = 'Bo mon MMT va Vien thong' WHERE TENDV = 'Bộ môn MMT và Viễn thông';
+/
 SELECT * FROM DONVI;
 /
-
 DELETE FROM NHANSU;
 ALTER TABLE NHANSU MODIFY (MANV GENERATED ALWAYS AS IDENTITY (START WITH 1));
 /
 INSERT INTO NHANSU (HOTEN, PHAI, NGSINH, PHUCAP, DT, VAITRO, MADV, USERNAME) 
-VALUES ('Nguyen Van A', 'Nam', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 5000000, 123456789, 'TRƯỞNG KHOA', 1, 'TK_1');
+VALUES ('Nguyen Van A', 'Nam', TO_DATE('1990-01-01', 'YYYY-MM-DD'), 5000000, 123456789, 'TRUONG KHOA', 1, 'TK_1');
 
 INSERT INTO NHANSU (HOTEN, PHAI, NGSINH, PHUCAP, DT, VAITRO, MADV, USERNAME) 
-VALUES ('Tran Thi B', 'Nữ', TO_DATE('1990-01-02', 'YYYY-MM-DD'),30000000 , 0123456668, 'TRƯỞNG ĐƠN VỊ', 2, 'TDV_2');
+VALUES ('Tran Thi B', 'Nu', TO_DATE('1990-01-02', 'YYYY-MM-DD'),30000000 , 0123456668, 'TRUONG DON VI', 2, 'TDV_2');
 
 INSERT INTO NHANSU (HOTEN, PHAI, NGSINH, PHUCAP, DT, VAITRO, MADV, USERNAME) 
-VALUES ('Pham Van C', 'Nữ', TO_DATE('1990-01-03', 'YYYY-MM-DD'), 20000000 , 0933384111, 'TRƯỞNG ĐƠN VỊ', 3, 'TDV_3');
+VALUES ('Pham Van C', 'Nu', TO_DATE('1990-01-03', 'YYYY-MM-DD'), 20000000 , 0933384111, 'TRUONG DON VI', 3, 'TDV_3');
 
 INSERT INTO NHANSU (HOTEN, PHAI, NGSINH, PHUCAP, DT, VAITRO, MADV, USERNAME) 
-VALUES ('Le Thi D', 'Nữ', TO_DATE('1990-01-04', 'YYYY-MM-DD'), 25000000 , 0933384112, 'TRƯỞNG ĐƠN VỊ', 4, 'TDV_4');
+VALUES ('Le Thi D', 'Nu', TO_DATE('1990-01-04', 'YYYY-MM-DD'), 25000000 , 0933384112, 'TRUONG DON VI', 4, 'TDV_4');
 
 INSERT INTO NHANSU (HOTEN, PHAI, NGSINH, PHUCAP, DT, VAITRO, MADV, USERNAME) 
-VALUES ('Phan Van E', 'Nữ', TO_DATE('1990-01-03', 'YYYY-MM-DD'), 20000000 , 0933384113, 'TRƯỞNG ĐƠN VỊ', 5, 'TDV_5');
+VALUES ('Phan Van E', 'Nu', TO_DATE('1990-01-03', 'YYYY-MM-DD'), 20000000 , 0933384113, 'TRUONG DON VI', 5, 'TDV_5');
 
 INSERT INTO NHANSU (HOTEN, PHAI, NGSINH, PHUCAP, DT, VAITRO, MADV, USERNAME) 
-VALUES ('Huynh Van F', 'Nam', TO_DATE('1990-01-03', 'YYYY-MM-DD'), 21000000 , 0933384114, 'TRƯỞNG ĐƠN VỊ', 6, 'TDV_6');
+VALUES ('Huynh Van F', 'Nam', TO_DATE('1990-01-03', 'YYYY-MM-DD'), 21000000 , 0933384114, 'TRUONG DON VI', 6, 'TDV_6');
 
 INSERT INTO NHANSU (HOTEN, PHAI, NGSINH, PHUCAP, DT, VAITRO, MADV, USERNAME) 
-VALUES ('Tran Quoc E', 'Nam', TO_DATE('1990-01-03', 'YYYY-MM-DD'), 22000000 , 0933384115, 'TRƯỞNG ĐƠN VỊ', 7, 'TDV_7');
+VALUES ('Tran Quoc E', 'Nam', TO_DATE('1990-01-03', 'YYYY-MM-DD'), 22000000 , 0933384115, 'TRUONG DON VI', 7, 'TDV_7');
 /
-
+SELECT * FROM SINHVIEN;
 select * from DONVI;
 delete from sinhvien;
 ALTER TABLE sinhvien MODIFY (MASV GENERATED ALWAYS AS IDENTITY (START WITH 1));
@@ -75,7 +83,7 @@ BEGIN
         v_dob := v_dob + TRUNC(DBMS_RANDOM.VALUE(11, 365));
         
         -- Tạo giới tính ngẫu nhiên 
-        v_gender := CASE WHEN DBMS_RANDOM.VALUE() < 0.5 THEN 'Nam' ELSE 'Nữ' END;
+        v_gender := CASE WHEN DBMS_RANDOM.VALUE() < 0.5 THEN 'Nam' ELSE 'Nu' END;
         
         -- Tạo địa chỉ ngẫu nhiên         
         v_random_num := TRUNC(DBMS_RANDOM.VALUE(1, 11)); -- Số ngẫu nhiên từ 1 đến 10
@@ -110,26 +118,25 @@ END;
 /
 UPDATE DONVI 
 SET TRGDV = 1
-WHERE TENDV = 'Văn phòng khoa';
+WHERE TENDV = 'Van phong khoa';
 UPDATE DONVI 
 SET TRGDV = 2
-WHERE TENDV = 'Bộ môn HTTT';
+WHERE TENDV = 'Bo mon HTTT';
 UPDATE DONVI 
 SET TRGDV = 3
-WHERE TENDV = 'Bộ môn CNPM';
+WHERE TENDV = 'Bo mon CNPM';
 UPDATE DONVI 
 SET TRGDV = 4
-WHERE TENDV = 'Bộ môn KHMT';
+WHERE TENDV = 'Bo mon KHMT';
 UPDATE DONVI 
 SET TRGDV = 5
-WHERE TENDV = 'Bộ môn CNTT';
+WHERE TENDV = 'Bo mon CNTT';
 UPDATE DONVI 
 SET TRGDV = 6
-WHERE TENDV = 'Bộ môn TGMT';
+WHERE TENDV = 'Bo mon TGMT';
 UPDATE DONVI 
 SET TRGDV = 7
-WHERE TENDV = 'Bộ môn MMT và Viễn thông';
-
+WHERE TENDV = 'Bo mon MMT va Vien thong';
 /
 
 DECLARE
@@ -162,7 +169,7 @@ BEGIN
         -- Tạo lương ngẫu nhiên
         v_salary := TRUNC(DBMS_RANDOM.VALUE(5000000, 20000000)); -- Lương từ 5 triệu đến 20 triệu
          
-        v_gender := CASE WHEN DBMS_RANDOM.VALUE() < 0.5 THEN 'Nam' ELSE 'Nữ' END;
+        v_gender := CASE WHEN DBMS_RANDOM.VALUE() < 0.5 THEN 'Nam' ELSE 'Nu' END;
         
         v_random_num := TRUNC(DBMS_RANDOM.VALUE(1, 7)); -- Số ngẫu nhiên từ 1 đến 7
         -- Chèn dữ liệu vào bảng NHANSU
@@ -174,7 +181,7 @@ BEGIN
         ', GV_' || i || ')' );
         
         INSERT INTO NHANSU (HOTEN, PHAI, NGSINH, PHUCAP, DT, VAITRO, MADV, USERNAME)
-        VALUES (v_last_name || ' ' || v_first_name, v_gender, v_dob, v_salary, v_phone_number, 'GIẢNG VIÊN', v_random_num, 'GV_' || i);
+        VALUES (v_last_name || ' ' || v_first_name, v_gender, v_dob, v_salary, v_phone_number, 'GIANG VIEN', v_random_num, 'GV_' || i);
         
         ELSIF  i >= 88 AND i < 98
         THEN
@@ -183,7 +190,7 @@ BEGIN
         ', GVU_' || i || ')' );
         
         INSERT INTO NHANSU (HOTEN, PHAI, NGSINH, PHUCAP, DT, VAITRO, MADV, USERNAME)
-        VALUES (v_last_name || ' ' || v_first_name, v_gender, v_dob, v_salary, v_phone_number, 'GIÁO VỤ', v_random_num, 'GVU_' || i);
+        VALUES (v_last_name || ' ' || v_first_name, v_gender, v_dob, v_salary, v_phone_number, 'GIAO VU', v_random_num, 'GVU_' || i);
         
         ELSE
         DBMS_OUTPUT.PUT_LINE('INSERT INTO NHANSU (HOTEN, PHAI, NGSINH, PHUCAP, DT, VAITRO, MADV, USERNAME) VALUES (' 
@@ -191,7 +198,7 @@ BEGIN
         ', NVCB_' || i || ')' );
         
         INSERT INTO NHANSU (HOTEN, PHAI, NGSINH, PHUCAP, DT, VAITRO, MADV, USERNAME)
-        VALUES (v_last_name || ' ' || v_first_name, v_gender, v_dob, v_salary, v_phone_number, 'NHÂN VIÊN CƠ BẢN', v_random_num, 'NVCB_' || i);
+        VALUES (v_last_name || ' ' || v_first_name, v_gender, v_dob, v_salary, v_phone_number, 'NHAN VIEN CO BAN', v_random_num, 'NVCB_' || i);
         END IF;
     END LOOP;
 END;
