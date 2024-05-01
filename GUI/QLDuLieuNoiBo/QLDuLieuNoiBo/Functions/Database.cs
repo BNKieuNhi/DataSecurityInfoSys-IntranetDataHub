@@ -121,6 +121,7 @@ namespace QLDuLieuNoiBo
                     cmd.CommandType = CommandType.Text;
                     cmd.CommandText = sql;
                     Console.WriteLine(sql);
+        
                     var res = cmd.ExecuteNonQuery();
                     return res;
                 }

@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using QLDuLieuNoiBo.GiaoVu;
 using QLDuLieuNoiBo.TruongDonVi;
+using QLDuLieuNoiBo.SinhVien;
 
 namespace QLDuLieuNoiBo
 {
@@ -121,10 +122,10 @@ namespace QLDuLieuNoiBo
                     _fMain_TK.Show();
                     break;
 */
-/*                case "sinhvien":
-                    SinhVien.fMain _fMain = new fMain(taikhoan);
-                    _fMain.Show();
-                    break;*/
+                case "sinhvien":
+                    SinhVien.fMain_SV  _fMain_SV = new fMain_SV(taikhoan);
+                    _fMain_SV.Show();
+                    break;
             }
                 this.Hide();
             

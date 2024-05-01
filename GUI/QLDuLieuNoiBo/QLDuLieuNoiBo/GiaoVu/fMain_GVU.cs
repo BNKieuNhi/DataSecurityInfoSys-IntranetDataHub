@@ -87,5 +87,10 @@ namespace QLDuLieuNoiBo.GiaoVu
             fThongBao _fThongBao = new fThongBao();
             AddForm(_fThongBao);
         }
+
+        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

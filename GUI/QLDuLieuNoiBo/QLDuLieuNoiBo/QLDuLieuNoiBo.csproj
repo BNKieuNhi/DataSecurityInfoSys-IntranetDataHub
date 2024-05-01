@@ -248,6 +248,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SinhVien\fDangKi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinhVien\fDangKi.Designer.cs">
+      <DependentUpon>fDangKi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien\fHocPhan_SV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinhVien\fHocPhan_SV.Designer.cs">
+      <DependentUpon>fHocPhan_SV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien\fMain_SV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinhVien\fMain_SV.Designer.cs">
+      <DependentUpon>fMain_SV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SinhVien\fTTCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinhVien\fTTCaNhan.Designer.cs">
+      <DependentUpon>fTTCaNhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="TruongDonVi\fHocPhan_TDV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +380,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SinhVien\fHocPhan_SV.resx">
+      <DependentUpon>fHocPhan_SV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinhVien\fMain_SV.resx">
+      <DependentUpon>fMain_SV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SinhVien\fTTCaNhan.resx">
+      <DependentUpon>fTTCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TruongDonVi\fHocPhan_TDV.resx">
       <DependentUpon>fHocPhan_TDV.cs</DependentUpon>
     </EmbeddedResource>
@@ -386,7 +419,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="SinhVien\" />
     <Folder Include="TruongKhoa\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
