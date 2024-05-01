@@ -70,6 +70,7 @@
             this.txtSinhVien.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSinhVien.Location = new System.Drawing.Point(163, 25);
             this.txtSinhVien.Name = "txtSinhVien";
+            this.txtSinhVien.ReadOnly = true;
             this.txtSinhVien.Size = new System.Drawing.Size(165, 30);
             this.txtSinhVien.TabIndex = 50;
             // 
@@ -89,6 +90,7 @@
             this.txtHocPhan.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHocPhan.Location = new System.Drawing.Point(163, 80);
             this.txtHocPhan.Name = "txtHocPhan";
+            this.txtHocPhan.ReadOnly = true;
             this.txtHocPhan.Size = new System.Drawing.Size(165, 30);
             this.txtHocPhan.TabIndex = 54;
             // 
@@ -108,6 +110,7 @@
             this.txtNamHoc.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNamHoc.Location = new System.Drawing.Point(163, 136);
             this.txtNamHoc.Name = "txtNamHoc";
+            this.txtNamHoc.ReadOnly = true;
             this.txtNamHoc.Size = new System.Drawing.Size(165, 30);
             this.txtNamHoc.TabIndex = 60;
             // 

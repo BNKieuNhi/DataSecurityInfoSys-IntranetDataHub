@@ -62,6 +62,7 @@
             this.txtHoTen.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHoTen.Location = new System.Drawing.Point(163, 89);
             this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.ReadOnly = true;
             this.txtHoTen.Size = new System.Drawing.Size(275, 30);
             this.txtHoTen.TabIndex = 48;
             // 
@@ -83,6 +84,7 @@
             this.txtNgaySinh.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNgaySinh.Location = new System.Drawing.Point(163, 138);
             this.txtNgaySinh.Name = "txtNgaySinh";
+            this.txtNgaySinh.ReadOnly = true;
             this.txtNgaySinh.Size = new System.Drawing.Size(275, 30);
             this.txtNgaySinh.TabIndex = 50;
             // 
@@ -104,6 +106,7 @@
             this.txtPhai.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhai.Location = new System.Drawing.Point(163, 188);
             this.txtPhai.Name = "txtPhai";
+            this.txtPhai.ReadOnly = true;
             this.txtPhai.Size = new System.Drawing.Size(275, 30);
             this.txtPhai.TabIndex = 52;
             // 
@@ -146,6 +149,7 @@
             this.txtDonVi.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonVi.Location = new System.Drawing.Point(636, 138);
             this.txtDonVi.Name = "txtDonVi";
+            this.txtDonVi.ReadOnly = true;
             this.txtDonVi.Size = new System.Drawing.Size(275, 30);
             this.txtDonVi.TabIndex = 56;
             // 
@@ -167,6 +171,7 @@
             this.txtPhuCap.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhuCap.Location = new System.Drawing.Point(636, 89);
             this.txtPhuCap.Name = "txtPhuCap";
+            this.txtPhuCap.ReadOnly = true;
             this.txtPhuCap.Size = new System.Drawing.Size(275, 30);
             this.txtPhuCap.TabIndex = 54;
             // 
