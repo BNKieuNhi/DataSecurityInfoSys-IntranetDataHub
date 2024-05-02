@@ -117,11 +117,11 @@ namespace QLDuLieuNoiBo
                     TruongDonVi.fMain_TDV _fMain_TDV = new fMain_TDV(taikhoan);
                     _fMain_TDV.Show();
                     break;
-/*              case "truongkhoa":
+                  case "truongkhoa":
                     fMain_TK _fMain_TK = new fMain_TK(taikhoan);
                     _fMain_TK.Show();
                     break;
-*/
+
                 case "sinhvien":
                     SinhVien.fMain_SV  _fMain_SV = new fMain_SV(taikhoan);
                     _fMain_SV.Show();
