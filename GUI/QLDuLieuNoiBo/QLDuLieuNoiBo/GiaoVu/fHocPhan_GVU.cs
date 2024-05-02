@@ -59,6 +59,7 @@ namespace QLDuLieuNoiBo.GiaoVu
         private void btnThem_Click(object sender, EventArgs e)
         {
             new fTTHocPhan(null).ShowDialog();
+
         }
     }
 }
