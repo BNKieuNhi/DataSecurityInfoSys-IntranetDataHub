@@ -221,6 +221,7 @@ D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNo
 D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo - Copy\QLDuLieuNoiBo\obj\Debug\QLDuLieu.7EB08AAF.Up2Date
 D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo - Copy\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.exe
 D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo - Copy\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.pdb
+<<<<<<< Updated upstream
 C:\Users\Song Cat\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.csproj.AssemblyReference.cache
 C:\Users\Song Cat\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.csproj.SuggestedBindingRedirects.cache
 C:\Users\Song Cat\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.exe.config
@@ -287,3 +288,36 @@ C:\Users\Song Cat\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieu
 C:\Users\Song Cat\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.SinhVien.fTTCaNhan.resources
 C:\Users\Song Cat\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.SinhVien.fMain_SV.resources
 C:\Users\Song Cat\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.SinhVien.fHocPhan_SV.resources
+=======
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.fLogin.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.GiangVien.fKQHocPhan.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.GiangVien.fMain_GV.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.GiangVien.fPhanCong.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.GiaoVu.fDonVi_GVU.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.GiaoVu.fHocPhan_GVU.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.GiaoVu.fKeHoach_GVU.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.GiaoVu.fPhanCong_GVU.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.GiaoVu.fTTHocPhan.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.GiangVien.fTTSinhVien.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.GiaoVu.fMain_GVU.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.GiaoVu.fSinhVien_GVU.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.NVCoBan.fDonVi.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.NVCoBan.fHocPhan.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.NVCoBan.fKeHoach.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.NVCoBan.fMain_NV.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.NVCoBan.fSinhVien.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.NVCoBan.fThongBao.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.NVCoBan.fTTCaNhan.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.TruongDonVi.fMain_TDV.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.TruongDonVi.fPhanCongTheoDV.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.TruongDonVi.fPhanCong_TDV.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.TruongDonVi.fTTPhanCong_TDV.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.TruongKhoa.fMain_TK.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.TruongKhoa.fNhanSu_TK.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.TruongKhoa.fTTinNhanSu.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.GiaoVu.fDangKy_GVU.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.GiaoVu.fKQHocPhan_GVU.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.SinhVien.fHocPhan_SV.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.SinhVien.fMain_SV.resources
+D:\GitHub\DataSecurityInfoSys\DataSecurityInfoSys-IntranetDataHub\GUI\QLDuLieuNoiBo\QLDuLieuNoiBo\obj\Debug\QLDuLieuNoiBo.SinhVien.fTTCaNhan.resources
+>>>>>>> Stashed changes

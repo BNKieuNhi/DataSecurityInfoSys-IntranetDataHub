@@ -1,0 +1,205 @@
+-- ====== CS#1 NVCB ======
+-- 1.1. Xem dòng dữ liệu của chính mình trong quan hệ NHANSU, 
+-- có thể chỉnh sửa số điện thoại (ĐT) của chính mình (nếu số điện thoại có thay đổi). 
+-- 1.2. Xem thông tin của tất cả SINHVIEN, ĐƠNVỊ, HOCPHAN, KHMO.
+CREATE OR REPLACE VIEW V_XEMTTINCANHAN_NHANSU
+AS
+SELECT *
+FROM NHANSU
+WHERE USERNAME = SYS_CONTEXT('USERENV', 'SESSION_USER');
+/
+GRANT SELECT ON U_ADMIN.V_XEMTTINCANHAN_NHANSU TO NHANVIENCOBAN;
+/
+GRANT UPDATE(DT) ON U_ADMIN.V_XEMTTINCANHAN_NHANSU TO NHANVIENCOBAN;
+/
+GRANT SELECT ON U_ADMIN.SINHVIEN TO NHANVIENCOBAN;
+GRANT SELECT ON U_ADMIN.DONVI TO NHANVIENCOBAN;
+GRANT SELECT ON U_ADMIN.HOCPHAN TO NHANVIENCOBAN;
+GRANT SELECT ON U_ADMIN.KHMO TO NHANVIENCOBAN;
+/
+SELECT *
+FROM dba_tab_privs
+WHERE grantee = 'NHANVIENCOBAN';
+/
+SELECT ROLE FROM DBA_ROLES;
+/
+
+-- ====== CS#2 GIANGVIEN ======
+-- 2.1. Như một người dùng có vai trò “Nhân viên cơ bản” (xem mô tả CS#1). 
+-- 2.2. Xem dữ liệu phân công giảng dạy liên quan đến bản thân mình (PHANCONG). 
+-- 2.3. Xem dữ liệu trên quan hệ ĐANGKY liên quan đến các lớp học phần mà giảng viên 
+-- được phân công giảng dạy. 
+-- 2.4. Cập nhật dữ liệu tại các trường liên quan điểm số (trong quan hệ ĐANGKY) của các 
+-- sinh viên có tham gia lớp học phần mà giảng viên đó được phân công giảng dạy. 
+-- Các trường liên quan điểm số bao gồm: ĐIEMTH, ĐIEMQT, ĐIEMCK, ĐIEMTK. 
+DECLARE
+  v_sql VARCHAR2(4000);
+BEGIN
+  FOR priv_rec IN (SELECT * FROM dba_tab_privs WHERE grantee = 'NHANVIENCOBAN') LOOP
+    v_sql := 'GRANT ' || priv_rec.privilege || ' ON ' || priv_rec.owner || '.' || priv_rec.table_name || ' TO GIANGVIEN';
+    EXECUTE IMMEDIATE v_sql;
+  END LOOP;
+
+  FOR role_rec IN (SELECT * FROM dba_role_privs WHERE grantee = 'NHANVIENCOBAN') LOOP
+    v_sql := 'GRANT ' || role_rec.granted_role || ' TO GIANGVIEN';
+    EXECUTE IMMEDIATE v_sql;
+  END LOOP;
+END;
+/
+GRANT UPDATE(DT) ON U_ADMIN.V_XEMTTINCANHAN_NHANSU TO NHANVIENCOBAN;
+/
+CREATE OR REPLACE VIEW U_ADMIN.V_XEMPHANCONG
+AS 
+SELECT PC.*
+FROM PHANCONG PC, NHANSU NS
+WHERE PC.MAGV = NS.MANV AND NS.USERNAME = SYS_CONTEXT('USERENV', 'SESSION_USER');
+/
+CREATE OR REPLACE VIEW V_XEMDANGKY
+AS 
+SELECT DK.*
+FROM DANGKY DK, NHANSU NS
+WHERE DK.MAGV = NS.MANV AND NS.USERNAME = SYS_CONTEXT('USERENV', 'SESSION_USER');
+/
+GRANT UPDATE(DT) ON U_ADMIN.V_XEMTTINCANHAN_NHANSU TO GIANGVIEN;
+GRANT SELECT ON U_ADMIN.V_XEMPHANCONG TO GIANGVIEN;
+GRANT SELECT ON U_ADMIN.V_XEMDANGKY TO GIANGVIEN;
+GRANT UPDATE(DIEMTH, DIEMQT, DIEMCK) ON U_ADMIN.V_XEMDANGKY TO GIANGVIEN;
+/
+SELECT *
+FROM dba_tab_privs
+WHERE grantee = 'GIANGVIEN';
+/
+--CS#3 GIAOVU
+DECLARE
+  v_sql VARCHAR2(4000);
+BEGIN
+  FOR priv_rec IN (SELECT * FROM dba_tab_privs WHERE grantee = 'NHANVIENCOBAN') LOOP
+    v_sql := 'GRANT ' || priv_rec.privilege || ' ON ' || priv_rec.owner || '.' || priv_rec.table_name || ' TO GIAOVU';
+    EXECUTE IMMEDIATE v_sql;
+  END LOOP;
+
+  FOR role_rec IN (SELECT * FROM dba_role_privs WHERE grantee = 'NHANVIENCOBAN') LOOP
+    v_sql := 'GRANT ' || role_rec.granted_role || ' TO GIAOVU';
+    EXECUTE IMMEDIATE v_sql;
+  END LOOP;
+END;
+/
+GRANT UPDATE(DT) ON U_ADMIN.V_XEMTTINCANHAN_NHANSU TO GIAOVU;
+/
+GRANT UPDATE, INSERT ON SINHVIEN TO GIAOVU;
+GRANT UPDATE, INSERT ON DONVI TO GIAOVU;
+GRANT UPDATE, INSERT ON HOCPHAN TO GIAOVU;
+GRANT UPDATE, INSERT ON KHMO TO GIAOVU;
+/
+GRANT SELECT ON PHANCONG TO GIAOVU;
+/
+CREATE OR REPLACE VIEW V_XEMPCVPKHOA
+AS 
+SELECT PC.*
+FROM U_ADMIN.PHANCONG PC, U_ADMIN.HOCPHAN HP
+WHERE PC.MAHP = HP.MAHP AND HP.MADV = 1;
+/
+GRANT SELECT, UPDATE ON V_XEMPCVPKHOA TO GIAOVU;
+--REVOKE SELECT, UPDATE ON V_XEMPCVPKHOA FROM GIAOVU;
+/
+CREATE OR REPLACE VIEW V_THEMXOADANGKY AS
+SELECT * FROM DANGKY 
+WHERE  (HK = 1 AND TO_DATE('01-SEP-' || SUBSTR(NAM, 1, INSTR(NAM, '-') - 1), 'DD-MON-YYYY') + 14 >= SYSDATE)
+    OR (HK = 2 AND TO_DATE('01-JAN-' || SUBSTR(NAM, INSTR(NAM, '-') + 1), 'DD-MON-YYYY') + 14 >= SYSDATE)
+    OR (HK = 3 AND TO_DATE('01-MAY-' || SUBSTR(NAM, INSTR(NAM, '-') + 1), 'DD-MON-YYYY') + 14 >= SYSDATE);
+/
+GRANT SELECT, INSERT, DELETE ON V_THEMXOADANGKY TO GIAOVU;
+--REVOKE SELECT, INSERT, DELETE ON V_THEMXOADANGKY FROM GIAOVU;
+/
+SELECT *
+FROM dba_tab_privs
+WHERE grantee = 'GIAOVU';
+/
+
+--CS#4 TRUONGDONVI
+DECLARE
+  v_sql VARCHAR2(4000);
+BEGIN
+  FOR priv_rec IN (SELECT * FROM dba_tab_privs WHERE grantee = 'GIANGVIEN') LOOP
+    v_sql := 'GRANT ' || priv_rec.privilege || ' ON ' || priv_rec.owner || '.' || priv_rec.table_name || ' TO TRUONGDONVI';
+    EXECUTE IMMEDIATE v_sql;
+  END LOOP;
+
+  FOR role_rec IN (SELECT * FROM dba_role_privs WHERE grantee = 'GIANGVIEN') LOOP
+    v_sql := 'GRANT ' || role_rec.granted_role || ' TO TRUONGDONVI';
+    EXECUTE IMMEDIATE v_sql;
+  END LOOP;
+END;
+/
+GRANT UPDATE(DT) ON U_ADMIN.V_XEMTTINCANHAN_NHANSU TO TRUONGDONVI;
+GRANT UPDATE(DIEMTH, DIEMQT, DIEMCK) ON U_ADMIN.V_XEMDANGKY TO TRUONGDONVI;
+/
+CREATE OR REPLACE VIEW V_XEMTTINPCTHEODONVI
+AS
+SELECT PC.*
+FROM U_ADMIN.PHANCONG PC, U_ADMIN.HOCPHAN HP, U_ADMIN.NHANSU NS
+WHERE PC.MAHP = HP.MAHP AND HP.MADV = NS.MADV 
+    AND NS.USERNAME = SYS_CONTEXT('USERENV', 'SESSION_USER');
+/
+GRANT SELECT, INSERT, UPDATE, DELETE ON V_XEMTTINPCTHEODONVI TO TRUONGDONVI;
+/
+CREATE OR REPLACE VIEW V_XEMPCGVCHUNGDONVI
+AS 
+SELECT PC.*
+FROM U_ADMIN.PHANCONG PC, U_ADMIN.NHANSU NS, U_ADMIN.NHANSU TDV
+WHERE PC.MAGV = NS.MANV AND NS.MANV = TDV.MANV 
+    AND TDV.USERNAME = SYS_CONTEXT('USERENV', 'SESSION_USER');
+/
+GRANT SELECT ON V_XEMPCGVCHUNGDONVI TO TRUONGDONVI;
+/
+SELECT *
+FROM dba_tab_privs
+WHERE grantee = 'TRUONGDONVI';
+/
+-- ====== CS#5: Người dùng có VAITRO là “Trưởng khoa” có quyền hạn: ======
+-- 5.1. Như một người dùng có vai trò “Giảng viên” 
+-- 5.2. Thêm, Xóa, Cập nhật dữ liệu trên quan hệ PHANCONG đối với các học phần quản lý 
+-- bởi đơn vị “Văn phòng khoa”. 
+-- 5.3. Được quyền Xem, Thêm, Xóa, Cập nhật trên quan hệ NHANSU. 
+-- 5.4. Được quyền Xem (không giới hạn) dữ liệu trên toàn bộ lược đồ CSDL.  Hãy viết code cho yêu cầu sau
+
+-- 5.1 Cấp quyền từ vai trò "Giảng viên" sang "Trưởng khoa"
+DECLARE
+  v_sql VARCHAR2(4000);
+BEGIN
+  FOR priv_rec IN (SELECT * FROM dba_tab_privs WHERE grantee = 'GIANGVIEN') LOOP
+    v_sql := 'GRANT ' || priv_rec.privilege || ' ON ' || priv_rec.owner || '.' || priv_rec.table_name || ' TO TRUONGKHOA';
+    EXECUTE IMMEDIATE v_sql;
+  END LOOP;
+
+  FOR role_rec IN (SELECT * FROM dba_role_privs WHERE grantee = 'GIANGVIEN') LOOP
+    v_sql := 'GRANT ' || role_rec.granted_role || ' TO TRUONGKHOA';
+    EXECUTE IMMEDIATE v_sql;
+  END LOOP;
+END;
+/
+GRANT UPDATE(DT) ON U_ADMIN.V_XEMTTINCANHAN_NHANSU TO TRUONGKHOA;
+GRANT UPDATE(DIEMTH, DIEMQT, DIEMCK) ON U_ADMIN.V_XEMDANGKY TO TRUONGKHOA;
+/
+-- 5.2. Cấp quyền thêm, xóa, cập nhật dữ liệu trên quan hệ PHANCONG
+--GRANT INSERT, UPDATE, DELETE ON U_ADMIN.PHANCONG TO TRUONGKHOA;
+CREATE OR REPLACE VIEW V_PHANCONG_VPK AS 
+SELECT PC.*
+FROM PHANCONG PC, HOCPHAN HP, DONVI DV 
+WHERE PC.MAHP = HP.MAHP
+AND HP.MADV = DV.MADV AND DV.TENDV = 'Van phong khoa';
+/
+GRANT INSERT, UPDATE, DELETE ON U_ADMIN.V_PHANCONG_VPK TO TRUONGKHOA;
+/
+-- 5.3. Cấp quyền Xem, Thêm, Xóa, Cập nhật trên quan hệ NHANSU
+GRANT SELECT, INSERT, UPDATE, DELETE ON U_ADMIN.NHANSU TO TRUONGKHOA;
+/
+-- 5.4. Cấp quyền Xem (không giới hạn) dữ liệu trên toàn bộ lược đồ CSDL
+GRANT SELECT ANY TABLE TO TRUONGKHOA;
+/
+SELECT *
+FROM dba_tab_privs
+WHERE grantee = 'TRUONGKHOA';
+
+GRANT SELECT ON U_ADMIN.SINHVIEN TO SV_1;
+/

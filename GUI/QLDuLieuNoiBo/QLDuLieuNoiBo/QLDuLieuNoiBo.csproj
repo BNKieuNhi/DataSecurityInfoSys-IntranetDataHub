@@ -156,6 +156,10 @@
     <Compile Include="GiangVien\fPhanCong.Designer.cs">
       <DependentUpon>fPhanCong.cs</DependentUpon>
     </Compile>
+    <Compile Include="GiaoVu\fDangKy_GVU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVu\fDangKy_GVU.Designer.cs" />
     <Compile Include="GiaoVu\fDonVi_GVU.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,6 +177,12 @@
     </Compile>
     <Compile Include="GiaoVu\fKeHoach_GVU.Designer.cs">
       <DependentUpon>fKeHoach_GVU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GiaoVu\fKQHocPhan_GVU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GiaoVu\fKQHocPhan_GVU.Designer.cs">
+      <DependentUpon>fKQHocPhan_GVU.cs</DependentUpon>
     </Compile>
     <Compile Include="GiaoVu\fPhanCong_GVU.cs">
       <SubType>Form</SubType>
@@ -249,6 +259,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SinhVien\fDangKi.cs">
+<<<<<<< Updated upstream
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SinhVien\fDangKi.Designer.cs">
@@ -273,11 +284,23 @@
       <DependentUpon>fTTCaNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="TruongDonVi\fHocPhan_TDV.cs">
+=======
+>>>>>>> Stashed changes
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TruongDonVi\fHocPhan_TDV.Designer.cs">
-      <DependentUpon>fHocPhan_TDV.cs</DependentUpon>
+    <Compile Include="SinhVien\fDangKi.Designer.cs" />
+    <Compile Include="SinhVien\fHocPhan_SV.cs">
+      <SubType>Form</SubType>
     </Compile>
+    <Compile Include="SinhVien\fHocPhan_SV.Designer.cs" />
+    <Compile Include="SinhVien\fMain_SV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinhVien\fMain_SV.Designer.cs" />
+    <Compile Include="SinhVien\fTTCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SinhVien\fTTCaNhan.Designer.cs" />
     <Compile Include="TruongDonVi\fMain_TDV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -289,6 +312,36 @@
     </Compile>
     <Compile Include="TruongDonVi\fPhanCongTheoDV.Designer.cs">
       <DependentUpon>fPhanCongTheoDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongDonVi\fPhanCong_TDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDonVi\fPhanCong_TDV.Designer.cs">
+      <DependentUpon>fPhanCong_TDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongDonVi\fTTPhanCong_TDV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongDonVi\fTTPhanCong_TDV.Designer.cs">
+      <DependentUpon>fTTPhanCong_TDV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongKhoa\fMain_TK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongKhoa\fMain_TK.Designer.cs">
+      <DependentUpon>fMain_TK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongKhoa\fNhanSu_TK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongKhoa\fNhanSu_TK.Designer.cs">
+      <DependentUpon>fNhanSu_TK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TruongKhoa\fTTinNhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TruongKhoa\fTTinNhanSu.Designer.cs">
+      <DependentUpon>fTTinNhanSu.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admin\fAddRole.resx">
       <DependentUpon>fAddRole.cs</DependentUpon>
@@ -326,6 +379,7 @@
     <EmbeddedResource Include="GiangVien\fPhanCong.resx">
       <DependentUpon>fPhanCong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GiaoVu\fDangKy_GVU.resx" />
     <EmbeddedResource Include="GiaoVu\fDonVi_GVU.resx">
       <DependentUpon>fDonVi_GVU.cs</DependentUpon>
     </EmbeddedResource>
@@ -334,6 +388,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoVu\fKeHoach_GVU.resx">
       <DependentUpon>fKeHoach_GVU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GiaoVu\fKQHocPhan_GVU.resx">
+      <DependentUpon>fKQHocPhan_GVU.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GiaoVu\fPhanCong_GVU.resx">
       <DependentUpon>fPhanCong_GVU.cs</DependentUpon>
@@ -380,6 +437,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+<<<<<<< Updated upstream
     <EmbeddedResource Include="SinhVien\fHocPhan_SV.resx">
       <DependentUpon>fHocPhan_SV.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,11 +450,31 @@
     <EmbeddedResource Include="TruongDonVi\fHocPhan_TDV.resx">
       <DependentUpon>fHocPhan_TDV.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <EmbeddedResource Include="SinhVien\fHocPhan_SV.resx" />
+    <EmbeddedResource Include="SinhVien\fMain_SV.resx" />
+    <EmbeddedResource Include="SinhVien\fTTCaNhan.resx" />
+>>>>>>> Stashed changes
     <EmbeddedResource Include="TruongDonVi\fMain_TDV.resx">
       <DependentUpon>fMain_TDV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TruongDonVi\fPhanCongTheoDV.resx">
       <DependentUpon>fPhanCongTheoDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDonVi\fPhanCong_TDV.resx">
+      <DependentUpon>fPhanCong_TDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongDonVi\fTTPhanCong_TDV.resx">
+      <DependentUpon>fTTPhanCong_TDV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongKhoa\fMain_TK.resx">
+      <DependentUpon>fMain_TK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongKhoa\fNhanSu_TK.resx">
+      <DependentUpon>fNhanSu_TK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TruongKhoa\fTTinNhanSu.resx">
+      <DependentUpon>fTTinNhanSu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Oracle.DataAccess.Common.Configuration.Section.xsd">
       <SubType>Designer</SubType>
@@ -418,9 +496,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+<<<<<<< Updated upstream
   <ItemGroup>
     <Folder Include="TruongKhoa\" />
   </ItemGroup>
+=======
+  <ItemGroup />
+>>>>>>> Stashed changes
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets" Condition="Exists('..\packages\System.Text.Json.6.0.1\build\System.Text.Json.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
